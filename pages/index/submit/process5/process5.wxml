@@ -1,0 +1,49 @@
+<!--pages/index/submit/process5/process5.wxml-->
+<!-- 6.联系方式 -->
+<!-- <view>
+    <text>联系方式</text>
+</view>
+<view>
+    <text>姓名：</text> 
+</view>
+<input type="text" name="" id=""/>
+<view>
+    <text>电话：</text> 
+</view>
+<input type="number" name="" id=""/>
+<view>
+    <text>邮箱：</text> 
+</view>
+<input type="text" name="" id=""/>
+<view></view> -->
+<van-tabs active="{{ active }}">
+  <van-tab title="飞行类型"></van-tab>
+  <van-tab title="飞行日期"></van-tab>
+  <van-tab title="飞行位置"></van-tab>
+  <van-tab title="任务描述"></van-tab>
+  <van-tab title="订单预算"></van-tab>
+  <van-tab title="联系方式"></van-tab>
+</van-tabs>
+
+<view class="card">
+    <!-- 联系信息发布 -->
+    <form bindsubmit='formSubmit'>
+    <view class='form'>
+    <text class='label' style="margin-bottom: 20px;">姓名<text class='red'>(必填)</text></text>
+    <input class='int' name="name" style="margin-bottom: 20px;"></input>
+    <text class='label' style="margin-bottom: 20px;">手机<text class='red'>(必填)</text></text>
+    <input class='int'name="phone" type="number" maxlength="11" bindinput="inputPhoneNum" style="margin-bottom: 20px;"></input>
+    <text class='label' style="margin-bottom: 20px;">邮箱<text class='red'>(必填)</text></text>
+    <input class='int' name="email" bindchange="inputemail" style="margin-bottom: 20px;"></input>
+    <text class='label' style="margin-bottom: 20px;">单位<text class='red'>(必填)</text></text>
+    <input class='int' name="company" style="margin-bottom: 20px;"></input>
+    <text class='label' style="margin-bottom: 20px;">职务<text class='red'>(必填)</text></text>
+        <input class='int' name="job" style="margin-bottom: 20px;"></input>
+    </view>
+    <!-- 7.发布任务 -->
+    <!-- <button type="primary" bindtap="submit" class="index-submit-process4" bindtap="gotoPageProcess4">上一步</button> -->
+    <button class='index-submit' formType="submit">提交</button>
+    </form>
+</view>
+
+

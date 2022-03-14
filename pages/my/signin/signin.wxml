@@ -1,0 +1,110 @@
+<!--pages/signIn2/signIn2.wxml-->
+<view class='sign-new'>
+  <view class='in'>
+    <view class='new-head'>
+      <view class='sig-tl'>
+        <view class='tln'>已连续签到<label class='n'>{{newSignNum}}</label>天</view>
+        <view class='tlf'>积分：<label class='f'>{{newSignIntegral}}</label></view>
+      </view>
+    
+      <!-- 未签到 -->
+      <view wx:if='{{!newSignBtnState}}' class='sig-qiu sig-qiu-no' bindtap='bindSignFn'  >
+        <label class='ti'>签到</label>
+      </view>
+      <!-- 已签到 -->
+      <view wx:else class='sig-qiu sig-qiu-yes'>
+        <label class='ti'>已签到</label>
+      </view>
+    </view>
+
+    <view class='new-week' >
+      <view class='we-mod'>
+        <view class='mo-fen'>
+          <label class='f f3' wx:if='{{continuityDays3}}'>+3积分</label>
+          <label class='f f7' wx:if='{{continuityDays7}}'>+7积分</label>
+        </view>
+        <view class='mo-line'>
+          <block wx:for="{{newSignedArr}}"  wx:for-item="v" wx:key="k">
+            <label class="q {{v.isSigned?'hover':''}}"></label>
+          </block>
+        </view>
+        <view class='mo-ri'>
+           <block wx:for="{{newSignedArr}}"  wx:for-item="v" wx:key="k">
+            <label class="t">{{v.day}}</label>
+          </block>
+        </view>
+      </view>
+    </view>
+  </view>
+</view>
+
+<view class="title-footer">
+      <text> ··· 猜您喜欢 ··· </text>
+</view>
+
+<view class="weui-grids2">
+        <view onTap="onDiscount" class="weui-grid2" hover-class="weui-grid_active">
+          <view class="weui-grid__labelbreak" onTap="onDiscount">
+                更多>
+          </view>
+        </view>
+</view>
+          
+<view class="weui-grids">
+        <view onTap="onDiscount" class="weui-grid" hover-class="weui-grid_active">
+           <image class="weui-grid__icon" src="../../../images/index.jpg" />
+          <view class="weui-grid__label2">
+            <!-- <text> -->
+            我是商品名称                                                                                                  
+            <!-- </text> -->
+          </view>
+          <view class="weui-grid__label3">
+            <!-- <text> -->
+            ￥1900.00                                                                                                     
+            <!-- </text> -->
+          </view>
+        </view>
+        <view onTap="onDiscount" class="weui-grid" hover-class="weui-grid_active">
+           <image class="weui-grid__icon" src="../../../images/index.jpg" />
+          <view class="weui-grid__label2">
+            <!-- <text> -->
+            我是商品名称                                                                                                     
+            <!-- </text> -->
+          </view>
+          <view class="weui-grid__label3">
+            <!-- <text> -->
+            ￥1900.00                                                                                                     
+            <!-- </text> -->
+          </view>
+        </view>
+        <view onTap="categoryTap" class="weui-grid" hover-class="weui-grid_active">
+           <image class="weui-grid__icon" src="../../../images/index.jpg" />
+          <view class="weui-grid__label2">
+            <!-- <text> -->
+            我是商品名称                                                                                                     
+            <!-- </text> -->
+          </view>
+          <view class="weui-grid__label3">
+            <!-- <text> -->
+            ￥1900.00                                                                                                     
+            <!-- </text> -->
+          </view>
+        </view>
+        <view onTap="onGold" class="weui-grid" hover-class="weui-grid_active">
+           <image class="weui-grid__icon" src="../../../images/index.jpg" />
+          <view class="weui-grid__label2">
+            <!-- <text> -->
+            我是商品名称                                                                                                     
+            <!-- </text> -->
+          </view>
+          <view class="weui-grid__label3">
+            <!-- <text> -->
+            ￥1900.00                                                                                                     
+            <!-- </text> -->
+          </view>
+        </view>
+</view>
+
+<view class="end-footer">
+      <text> ··· 我是有底线的 ··· </text>
+</view>

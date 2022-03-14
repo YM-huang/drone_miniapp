@@ -1,0 +1,12 @@
+<view class="item">
+      <image class="poster" src="../../../images/index.jpg"/>
+      <view class="meta">
+        <text class="title">as</text>
+        <text class="sub-title">assaas</text>
+        <view class="artists">导演：ewew</view>
+      </view>
+      <view class="rating">
+        <text>saassa</text>
+      </view>
+    </view>
+

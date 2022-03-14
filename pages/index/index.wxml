@@ -1,0 +1,172 @@
+<!--index-->
+<view class="page">
+    <!-- 侧边栏内容 -->
+    <!-- <view class="page-slidebar">
+        <view class="page-content">
+            <view class="wc">
+                <text>首页</text>
+            </view>
+            <view class="wc" bindtap="gotoPageSubmit">
+                <text>发布任务</text>
+            </view>
+            <view class="wc" bindtap="gotoPageNewerTeach">
+                <text>新手指南</text>
+            </view>
+        </view>
+    </view> -->
+    <!-- <view bindtouchmove="tap_drag" bindtouchend="tap_end" bindtouchstart="tap_start" class="page-top {{open ? ['c-state','cover'] : ''}} "> -->
+        <SearchBar id="SearchBar" addflag="{{addflag}}" addimg="{{addimg}}" bind:addhandle="addhandle" searchstr="{{searchstr}}" bind:searchList="searchList" bind:endsearchList="endsearchList" bind:cancelsearch="cancelsearch" bind:activity_clear="activity_clear">
+        </SearchBar>
+       <swiper class="swiper-index" indicator-dots="{{indicatorDots}}" autoplay="{{autoplay}}" interval="{{interval}}" duration="{{duration}}">
+            <block wx:for="{{imgItems}}">
+            <swiper-item>
+                <image src="{{item}}" class="slide-image"  mode="aspectFill" />
+            </swiper-item>
+            </block>
+        </swiper>
+
+        <view class='board'>
+          <navigator url="/pages/index/submit/submit">
+            <view class="board-item" >
+              <text>接单赚钱</text>
+              <image src="../../images/arrowright.png" mode='aspectFill'/>
+            </view>
+          </navigator>
+          <navigator url="/pages/my/rank/rank">
+            <view class="board-item" >
+              <text>飞手榜单</text>
+              <image src="../../images/arrowright.png" mode='aspectFill'/>
+            </view>
+          </navigator>
+          <navigator url="/pages/index/teaching/teaching">
+            <view class="board-item" >
+              <text>新手导航</text>
+              <image src="../../images/arrowright.png" mode='aspectFill'/>
+            </view>
+          </navigator>
+          
+          
+        </view>
+
+      <!-- <view class="weui-gridsgoldcontent">
+        <view bindtap="gotoPageParse" class="weui-gridgoldcontent">
+          <image class="weui-grid__icon" src="icon/爆款.png" />
+          <view class="weui-grid__label2">
+            <text>
+            爆款                                                                                                  
+            </text>
+          </view>
+        </view>
+        <view bindtap="onRank" class="weui-gridgoldcontent">
+          <image class="weui-grid__icon" src="icon/返利.png" />
+          <view class="weui-grid__label2">
+            <text>
+            返利                                                                                                  
+            </text>
+          </view>
+        </view>
+        <view bindtap="onRank" class="weui-gridgoldcontent">
+          <image class="weui-grid__icon" src="icon/红包.png" />
+          <view class="weui-grid__label2">
+            <text>
+            红包                                                                                                  
+            </text>
+          </view>
+        </view>
+        <view bindtap="onRank" class="weui-gridgoldcontent">
+          <image class="weui-grid__icon" src="icon/奖励-2.png" />
+          <view class="weui-grid__label2">
+            <text>
+            奖励                                                                                                  
+            </text>
+          </view>
+        </view>
+      </view>
+
+      <view class="weui-gridsgoldcontent">
+        <view bindtap="onRecord" class="weui-gridgoldcontent">
+          <image class="weui-grid__icon" src="icon/足迹.png" />
+          <view class="weui-grid__label2">
+            <text>
+            足迹                                                                                                  
+            </text>
+          </view>
+        </view>
+        <view bindtap="onRank" class="weui-gridgoldcontent">
+          <image class="weui-grid__icon" src="icon/我的集分宝.png" />
+          <view class="weui-grid__label2">
+            <text>
+            积分                                                                                                  
+            </text>
+          </view>
+        </view>
+        <view bindtap="onRank" class="weui-gridgoldcontent">
+          <image class="weui-grid__icon" src="icon/扫码.png" />
+          <view class="weui-grid__label2">
+            <text>
+            扫码                                                                                                 
+            </text>
+          </view>
+        </view>
+        <view bindtap="onRank" class="weui-gridgoldcontent">
+          <image class="weui-grid__icon" src="icon/帮助与说明.png" />
+          <view class="weui-grid__label2">
+            <text>
+            帮助与说明                                                                                                  
+            </text>
+          </view>
+        </view>
+      </view> -->
+        
+      <!-- <view class="weui-gridsbuy">
+        <view onTap="onDiscount" class="weui-gridbuy" hover-class="weui-grid_active">
+           <image class="weui-grid__iconbuy" src="../../images/index.jpg" />
+          <view class="weui-grid__labelbuy2"> -->
+            <!-- <text> -->
+            <!-- 飞行器租赁                                                                                                  -->
+            <!-- </text> -->
+          <!-- </view>
+          <view class="weui-grid__labelbuy3"> -->
+            <!-- <text> -->
+            <!-- ￥1900.00                                                                                                      -->
+            <!-- </text> -->
+          <!-- </view>
+        </view>
+        <view onTap="onDiscount" class="weui-gridbuy" hover-class="weui-grid_active">
+           <image class="weui-grid__iconbuy" src="../../images/index2.jpg" />
+          <view class="weui-grid__labelbuy2"> -->
+            <!-- <text> -->
+            <!-- 飞行员试飞                                                                                                     -->
+            <!-- </text> -->
+          <!-- </view>
+          <view class="weui-grid__labelbuy3"> -->
+            <!-- <text> -->
+            <!-- ￥1009.00                                                                                                      -->
+            <!-- </text> -->
+          <!-- </view> -->
+        
+        <!-- </view> -->
+<!-- </view> -->
+    
+    <!-- </view> -->
+       
+    
+</view>
+<!-- <button open-type="share">
+    <image class='share-img' src='icon/38-客服.png'></image>
+  </button> -->
+<!-- <view class="index-title">无人机</view>
+<view class="index-title">共享平台</view>  -->
+
+<!-- <van-popup
+  show="{{ show }}"
+  position="top"
+  custom-style="width: 100%;"
+  bind:close="onClose"
+/> -->
+
+
+
+
+
+

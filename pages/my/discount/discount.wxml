@@ -1,0 +1,293 @@
+<view class="container">
+    <view class="page-section-demo">
+        
+            <view class="weui-grids">
+              <view onTap="onDiscount" class="weui-grid1">
+                <view class="weui-grid__label3">
+                  <!-- <text> -->
+                  新客专享红包                                                                                                 
+                  <!-- </text> -->
+                </view>
+                <view class="lv lvmode">
+                  <!-- <text> -->
+                    今日到期                                                                                                 
+                  <!-- </text> -->
+                </view>
+              </view>
+
+              <view onTap="onDiscount" class="weui-grid2">
+                  <view class="weui-grid__label1">
+                    <text>
+                    <text style="font-size:10pt;">￥</text>10                                                                                                  
+                    </text>
+                  </view>
+                  <view class="weui-grid__label2">
+                    <!-- <text> -->
+                    满10可用                                                                                                  
+                    <!-- </text> -->
+                  </view>
+              </view>
+
+              <view onTap="onDiscount" class="weui-grid3">
+                  <view class="line"></view>
+              </view>
+
+              <view onTap="onDiscount" class="weui-grid4">
+                  <view class="weui-grid__label4">
+                    <!-- <text> -->
+                    限商品现价+包装费满1500使用。                                                                                                 
+                    <!-- </text> -->
+                  </view>
+              </view>
+
+              <view onTap="onDiscount" class="weui-grid5">
+                  <view class="buttom buttommode">
+                    <!-- <text> -->
+                      去使用                                                                                                 
+                    <!-- </text> -->
+                  </view>
+              </view>
+            </view>
+
+            <view class="weui-grids">
+              <view onTap="onDiscount" class="weui-grid1">
+                <view class="weui-grid__label3">
+                  <!-- <text> -->
+                  新客专享红包                                                                                                 
+                  <!-- </text> -->
+                </view>
+                <view class="lv lvmode">
+                  <!-- <text> -->
+                    今日到期                                                                                                 
+                  <!-- </text> -->
+                </view>
+              </view>
+
+              <view onTap="onDiscount" class="weui-grid2">
+                  <view class="weui-grid__label1">
+                    <!-- <text> -->
+                    <text style="font-size:10pt;">￥</text>10                                                                                                  
+                    <!-- </text> -->
+                  </view>
+                  <view class="weui-grid__label2">
+                    <!-- <text> -->
+                    满10可用                                                                                                  
+                    <!-- </text> -->
+                  </view>
+              </view>
+
+              <view onTap="onDiscount" class="weui-grid3">
+                  <view class="line"></view>
+              </view>
+
+              <view onTap="onDiscount" class="weui-grid4">
+                  <view class="weui-grid__label4">
+                    <!-- <text> -->
+                    限商品现价+包装费满1500使用。                                                                                                 
+                    <!-- </text> -->
+                  </view>
+              </view>
+
+              <view onTap="onDiscount" class="weui-grid5">
+                  <view class="buttom buttommode">
+                    <!-- <text> -->
+                      去使用                                                                                                 
+                    <!-- </text> -->
+                  </view>
+              </view>
+            </view>
+
+            <view class="weui-grids">
+              <view onTap="onDiscount" class="weui-grid1">
+                <view class="weui-grid__label3">
+                  <!-- <text> -->
+                  超市新客专享红包                                                                                                 
+                  <!-- </text> -->
+                </view>
+                <view class="lv lvmode">
+                  <!-- <text> -->
+                    今日到期                                                                                                 
+                  <!-- </text> -->
+                </view>
+              </view>
+
+              <view onTap="onDiscount" class="weui-grid2">
+                  <view class="weui-grid__label1">
+                    <!-- <text> -->
+                    <text style="font-size:10pt;">￥</text>10                                                                                                  
+                    <!-- </text> -->
+                  </view>
+                  <view class="weui-grid__label2">
+                    <!-- <text> -->
+                    满1000可用                                                                                                  
+                    <!-- </text> -->
+                  </view>
+              </view>
+
+              <view onTap="onDiscount" class="weui-grid3">
+                  <view class="line"></view>
+              </view>
+
+              <view onTap="onDiscount" class="weui-grid4">
+                  <view class="weui-grid__label4">
+                    <!-- <text> -->
+                    限商品现价+包装费满1500使用。                                                                                                 
+                    <!-- </text> -->
+                  </view>
+              </view>
+
+              <view onTap="onDiscount" class="weui-grid5">
+                  <view class="buttom buttommode">
+                    <!-- <text> -->
+                      去使用                                                                                                 
+                    <!-- </text> -->
+                  </view>
+              </view>
+            </view>
+
+            <view class="weui-grids">
+              <view onTap="onDiscount" class="weui-grid1">
+                <view class="weui-grid__label3">
+                  <!-- <text> -->
+                  新客专享红包                                                                                                 
+                  <!-- </text> -->
+                </view>
+                <view class="lv lvmode">
+                  <!-- <text> -->
+                    今日到期                                                                                                 
+                  <!-- </text> -->
+                </view>
+              </view>
+
+              <view onTap="onDiscount" class="weui-grid2">
+                  <view class="weui-grid__label1">
+                    <!-- <text> -->
+                    <text style="font-size:10pt;">￥</text>10                                                                                                  
+                    <!-- </text> -->
+                  </view>
+                  <view class="weui-grid__label2">
+                    <!-- <text> -->
+                    满10可用                                                                                                  
+                    <!-- </text> -->
+                  </view>
+              </view>
+
+              <view onTap="onDiscount" class="weui-grid3">
+                  <view class="line"></view>
+              </view>
+
+              <view onTap="onDiscount" class="weui-grid4">
+                  <view class="weui-grid__label4">
+                    <!-- <text> -->
+                    限商品现价+包装费满15使用。                                                                                                 
+                    <!-- </text> -->
+                  </view>
+              </view>
+
+              <view onTap="onDiscount" class="weui-grid5">
+                  <view class="buttom buttommode">
+                    <!-- <text> -->
+                      去使用                                                                                                 
+                    <!-- </text> -->
+                  </view>
+              </view>
+            </view>
+
+            <view class="weui-grids">
+              <view onTap="onDiscount" class="weui-grid1">
+                <view class="weui-grid__label3">
+                  <!-- <text> -->
+                  新客专享红包                                                                                                 
+                  <!-- </text> -->
+                </view>
+                <view class="lv lvmode">
+                  <!-- <text> -->
+                    今日到期                                                                                                 
+                  <!-- </text> -->
+                </view>
+              </view>
+
+              <view onTap="onDiscount" class="weui-grid2">
+                  <view class="weui-grid__label1">
+                    <!-- <text> -->
+                    <text style="font-size:10pt;">￥</text>10                                                                                                  
+                    <!-- </text> -->
+                  </view>
+                  <view class="weui-grid__label2">
+                    <!-- <text> -->
+                    满10可用                                                                                                  
+                    <!-- </text> -->
+                  </view>
+              </view>
+
+              <view onTap="onDiscount" class="weui-grid3">
+                  <view class="line"></view>
+              </view>
+
+              <view onTap="onDiscount" class="weui-grid4">
+                  <view class="weui-grid__label4">
+                    <!-- <text> -->
+                    限商品现价+包装费满15使用。                                                                                                 
+                    <!-- </text> -->
+                  </view>
+              </view>
+
+              <view onTap="onDiscount" class="weui-grid5">
+                  <view class="buttom buttommode">
+                    <!-- <text> -->
+                      去使用                                                                                                 
+                    <!-- </text> -->
+                  </view>
+              </view>
+            </view>
+
+            <view class="weui-grids">
+              <view onTap="onDiscount" class="weui-grid1">
+                <view class="weui-grid__label3">
+                  <!-- <text> -->
+                  新客专享红包                                                                                                 
+                  <!-- </text> -->
+                </view>
+                <view class="lv lvmode">
+                  <!-- <text> -->
+                    今日到期                                                                                                 
+                  <!-- </text> -->
+                </view>
+              </view>
+
+              <view onTap="onDiscount" class="weui-grid2">
+                  <view class="weui-grid__label1">
+                    <!-- <text> -->
+                    <text style="font-size:10pt;">￥</text>10                                                                                                  
+                    <!-- </text> -->
+                  </view>
+                  <view class="weui-grid__label2">
+                    <!-- <text> -->
+                    满10可用                                                                                                  
+                    <!-- </text> -->
+                  </view>
+              </view>
+
+              <view onTap="onDiscount" class="weui-grid3">
+                  <view class="line"></view>
+              </view>
+
+              <view onTap="onDiscount" class="weui-grid4">
+                  <view class="weui-grid__label4">
+                    <!-- <text> -->
+                    限商品现价+包装费满15使用。                                                                                                 
+                    <!-- </text> -->
+                  </view>
+              </view>
+
+              <view onTap="onDiscount" class="weui-grid5">
+                  <view class="buttom buttommode">
+                    <!-- <text> -->
+                      去使用                                                                                                 
+                    <!-- </text> -->
+                  </view>
+              </view>
+            </view>
+    </view>
+</view>
+

@@ -1,0 +1,204 @@
+<!--pages/profile/profile.wxml-->
+<view class="container">
+  <view class="remind-box" wx:if="{{remind}}">
+    <image class="remind-img" src="loading.gif"></image>
+  </view>
+  <block wx:else>
+    <view class="content">
+      <view class="hd" style="transform:rotateZ({{angle}}deg);">
+          <image class="logo" src="user.jpg" onTap="onFriendcircle"></image>
+          <!-- <image class="logocar" src="user.jpg" onTap="onRoadlist"></image> -->
+          <text class="nickname">mmmmmm</text>
+          <text class="lv lvmode">lv.6</text>
+          <text class="title">123木头人</text>
+          <image class="wave" src="wave.png" mode="aspectFill"></image>
+          <image class="wave wave-bg" src="wave.png" mode="aspectFill"></image>
+          <view class="card"></view>
+      </view>
+
+      <view class="weui-gridsgold">
+        <view onTap="categoryTap" class="weui-gridgold">
+          <view class="weui-grid__labelgold">
+            <!-- <text> -->
+            我的订单                                                                                                     
+            <!-- </text> -->
+            <!-- <view style="color:#CFCFCF;font-size:8pt;">
+            每日签到获取金币         连续七日更有惊喜好礼                                                                                                  
+            </view> -->
+          </view>
+        </view>
+      </view>
+
+      <view class="weui-gridsgoldcontent">
+        <view bindtap="onSignin" class="weui-gridgoldcontent">
+          <image class="weui-grid__icon" src="icon/待确认.png" />
+          <view class="weui-grid__label2">
+            <!-- <text> -->
+            待确认                                                                                                  
+            <!-- </text> -->
+          </view>
+        </view>
+        <view bindtap="onDiscount" class="weui-gridgoldcontent">
+          <image class="weui-grid__icon" src="icon/待接单.png" />
+          <view class="weui-grid__label2">
+            <!-- <text> -->
+            待接单                                                                                                  
+            <!-- </text> -->
+          </view>
+        </view>
+        <view bindtap="categoryTap" class="weui-gridgoldcontent">
+          <image class="weui-grid__icon" src="icon/待签约.png" />
+          <view class="weui-grid__label2">
+            <!-- <text> -->
+            待签约                                                                                                  
+            <!-- </text> -->
+          </view>
+        </view>
+        <view bindtap="categoryTap" class="weui-gridgoldcontent">
+          <image class="weui-grid__icon" src="icon/待付款.png" />
+          <view class="weui-grid__label2">
+            <!-- <text> -->
+            待付款                                                                                                  
+            <!-- </text> -->
+          </view>
+        </view>
+      </view>
+
+      <view class="weui-gridsgoldcontent">
+        <view bindtap="onSignin" class="weui-gridgoldcontent">
+          <image class="weui-grid__icon" src="icon/开票.png" />
+          <view class="weui-grid__label2">
+            <!-- <text> -->
+            待开票                                                                                                  
+            <!-- </text> -->
+          </view>
+        </view>
+        <view bindtap="gotoPageHistory" class="weui-gridgoldcontent">
+          <image class="weui-grid__icon" src="icon/待评价.png" />
+          <view class="weui-grid__label2">
+            <!-- <text> -->
+            待评价                                                                                                  
+            <!-- </text> -->
+          </view>
+        </view>
+        <view bindtap="categoryTap" class="weui-gridgoldcontent">
+          <image class="weui-grid__icon" src="icon/取消.png" />
+          <view class="weui-grid__label2">
+            <!-- <text> -->
+            已取消                                                                                                  
+            <!-- </text> -->
+          </view>
+        </view>
+        <view bindtap="categoryTap" class="weui-gridgoldcontent">
+          <image class="weui-grid__icon" src="icon/完成.png" />
+          <view class="weui-grid__label2">
+            <!-- <text> -->
+            已完成                                                                                                  
+            <!-- </text> -->
+          </view>
+        </view>       
+      </view>
+
+     
+
+      <view class="weui-gridsgold">
+        <view bindtap="categoryTap" class="weui-gridgold">
+          <view class="weui-grid__labelgold">
+            <!-- <text> -->
+            实用功能                                                                                                  
+            <!-- </text> -->
+          </view>
+        </view>
+      </view>
+
+      <view class="weui-gridsgoldcontent">
+        <view bindtap="gotoPageWallet" class="weui-gridgoldcontent">
+          <image class="weui-grid__icon" src="icon/我的账户.png" />
+          <view class="weui-grid__label2">
+            <!-- <text> -->
+            我的账户                                                                                                  
+            <!-- </text> -->
+          </view>
+        </view>
+        <view bindtap="onRank" class="weui-gridgoldcontent">
+          <image class="weui-grid__icon" src="icon/我的积分.png" />
+          <view class="weui-grid__label2">
+            <!-- <text> -->
+            我的积分                                                                                                  
+            <!-- </text> -->
+          </view>
+        </view>
+        <view bindtap="gotoPageSignin" class="weui-gridgoldcontent">
+          <image class="weui-grid__icon" src="icon/签到.png" />
+          <view class="weui-grid__label2">
+            <!-- <text> -->
+            签到                                                                                                  
+            <!-- </text> -->
+          </view>
+        </view>
+        <view bindtap="onFriend" class="weui-gridgoldcontent">
+          <image class="weui-grid__iconadd" src="add.png" />
+        </view>
+      </view>
+
+      <view class="weui-gridsmy">
+        <view bindtap="categoryTap" class="weui-gridmy">
+          <view class="weui-grid__labelmy">
+            <image class="weui-grid__icon2" src="icon/无人机.png" />
+            <!-- <text> -->
+            我的无人机                                                                                                  
+            <!-- </text> -->
+          </view>
+        </view>
+      </view>
+
+      <view class="weui-gridsmy">
+        <view bindtap="categoryTap" class="weui-gridmy">
+          <view class="weui-grid__labelmy">
+            <image class="weui-grid__icon2" src="icon/发票.png" />
+            <!-- <text> -->
+            我的飞手                                                                                                 
+            <!-- </text> -->
+          </view>
+        </view>
+      </view>
+
+      <view class="weui-gridsmy">
+        <view bindtap="categoryTap" class="weui-gridmy">
+          <view class="weui-grid__labelmy">
+            <image class="weui-grid__icon2" src="icon/评价.png" />
+            <!-- <text> -->
+            我的评价                                                                                                  
+            <!-- </text> -->
+          </view>
+        </view>
+      </view>
+
+      <view class="weui-gridsmy">
+        <view bindtap="categoryTap" class="weui-gridmy">
+          <view class="weui-grid__labelmy">
+            <image class="weui-grid__icon2" src="icon/客服 (1).png" />
+            <!-- <text> -->
+            客服中心                                                                                                  
+            <!-- </text> -->
+          </view>
+        </view>
+      </view>
+
+      <view class="weui-gridsmy">
+        <view bindtap="categoryTap" class="weui-gridmy">
+          <view class="weui-grid__labelmy">
+            <image class="weui-grid__icon2" src="icon/设置.png" />
+            <!-- <text> -->
+            设置                                                                                                
+            <!-- </text> -->
+          </view>
+        </view>
+      </view>
+
+      
+
+    </view>
+
+  </block>
+</view>

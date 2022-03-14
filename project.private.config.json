@@ -1,0 +1,42 @@
+{
+    "setting": {},
+    "condition": {
+        "plugin": {
+            "list": []
+        },
+        "game": {
+            "list": []
+        },
+        "gamePlugin": {
+            "list": []
+        },
+        "miniprogram": {
+            "list": [
+                {
+                    "name": "问题2",
+                    "pathName": "pages/index/submit/process1/process1",
+                    "query": "",
+                    "scene": null
+                },
+                {
+                    "name": "问题1",
+                    "pathName": "pages/index/submit/submit",
+                    "query": "",
+                    "scene": null
+                },
+                {
+                    "name": "问题3",
+                    "pathName": "pages/index/submit/process2/process2",
+                    "query": "",
+                    "scene": null
+                },
+                {
+                    "name": "问题6",
+                    "pathName": "pages/index/submit/process5/process5",
+                    "query": "",
+                    "scene": null
+                }
+            ]
+        }
+    }
+}
