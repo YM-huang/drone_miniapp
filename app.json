@@ -3,14 +3,8 @@
         "pages/index/index",
         "pages/my/my",
         "pages/index/submit/submit",
-        "pages/index/submit/process1/process1",
-        "pages/index/submit/process2/process2",
-        "pages/index/submit/process3/process3",
         "pages/index/teaching/teaching",
         "pages/logs/logs",
-        "pages/index/submit/process4/process4",
-        "pages/index/submit/process5/process5",
-        "pages/index/submit/process6/process6",
         "utils/dateSetting",
         "pages/my/discount/discount",
         "pages/my/record/record",
@@ -49,7 +43,7 @@
                 "selectedIconPath": "images/客服after.png"
             },
             {
-                "pagePath": "pages/jiedan/jiedan",
+                "pagePath": "pages/my/my",
                 "text": "我的",
                 "iconPath": "images/我的.png",
                 "selectedIconPath": "images/我的after.png"

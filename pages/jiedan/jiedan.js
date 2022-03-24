@@ -1,25 +1,11 @@
 var index = 0;//便利的索引值
 Page({
   data: {
-    nvabarData: {
-      showCapsule: 0, //是否显示左上角图标   1表示显示    0表示不显示
-      title: '我要接单', //导航栏 中间的标题
-    },
     confirmBoxVisible: false,//确认弹框的显示
     deliverList: [],
     currentDeliverList: {},
     is_working: true,
     info:["labulafu","dululu"],
-
-    // gotmsg: "",
-    // output: [],
-    // num: 3,
-    // hero_img: [],   //骑手头像src
-    // hero_name: ["拉布拉夫", "欢乐马", "爬爬龟"],   //骑手名字
-    // book_info: ["(3/5)", "(2/3)", "(4/6)"],   //接单信息， 服务器直接返回组合后的信息 (3/8)
-    // pub_time: ["2020.5.8", "2020.5.4", "2020.5.6"],   //骑手信息发布时间
-    // ava_time: ["随时", "下午都行", "早上八点前"],  //骑手可行的工作时间
-    // hero_say: ["一单九十八，砍价死亲妈", "杭电老子跑最快！", "爬爬爬，给爷爬！"],  //骑手留的备注
   },
   switch_work: function (e) {//改变骑手工作状态
     console.log(e.detail.value);
