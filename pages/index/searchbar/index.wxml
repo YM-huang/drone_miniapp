@@ -11,7 +11,7 @@
         
         </view>
         <view wx:if="{{searchflag}}" bindtap='cancelsearch' class="activity_seabtn">取消</view>
-        <view class='activity_add' wx:if="{{addflag}}"><image bindtap='addhandle' src='../icon/扫码.png'></image></view>
+        <view class='activity_add' wx:if="{{addflag}}"><image bindtap='addhandle' src='../icon/scancode.png'></image></view>
     </view>
 <!-- 搜索框结束 -->
 

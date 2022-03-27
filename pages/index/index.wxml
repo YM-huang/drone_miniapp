@@ -11,19 +11,19 @@
     </view>
     <view class="buttonArea">
       <view  bindtap="gotopageRank" class="button">
-        <image src="../../ico/飞手排行.png"></image>
+        <image src="../../ico/rank.png"></image>
         <view>飞手排行</view>  
       </view>
       <view  bindtap="gotoPageSubmit" class="button"> 
-        <image src="../../ico/开始接单.png"></image>
+        <image src="../../ico/start.png"></image>
         <view>开始接单</view> 
       </view>
       <view  bindtap="gotoPageNewerTeach" class="button"> 
-        <image src="../../ico/新手指南.png"></image>
+        <image src="../../ico/guide.png"></image>
         <view>新手指南</view>
       </view>
       <view  bindtap="#" class="button" bindtap="post"> 
-        <image src="../../ico/敬请期待.png"></image>
+        <image src="../../ico/more.png"></image>
         <view>敬请期待</view> 
       </view>
     </view>

@@ -35,7 +35,7 @@
             "disablePlugins": [],
             "outputPath": ""
         },
-        "useIsolateContext": false,
+        "useIsolateContext": true,
         "userConfirmedBundleSwitch": false,
         "packNpmManually": false,
         "packNpmRelationList": [],
@@ -47,7 +47,7 @@
     },
     "compileType": "miniprogram",
     "libVersion": "2.22.0",
-    "projectname": "UAS1",
+    "projectname": "飞农使",
     "debugOptions": {
         "hidedInDevtools": []
     },
@@ -59,6 +59,7 @@
     "isGameTourist": false,
     "simulatorType": "wechat",
     "simulatorPluginLibVersion": {},
+    "appid": "wx145f71cc609485c9",
     "condition": {
         "search": {
             "list": []

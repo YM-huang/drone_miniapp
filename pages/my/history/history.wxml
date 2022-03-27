@@ -13,7 +13,7 @@
               </view>
 
               <view bindtap="gotoPagePoster" class="weui-grid9">
-                <image class="weui-grid__icon" src="../icon/分享.png" />
+                <image class="weui-grid__icon" src="../icon/share.png" />
               </view>
 
               <view onTap="onDiscount" class="weui-grid1">
@@ -74,7 +74,7 @@
               </view>
 
               <view bindtap="gotoPagePoster" class="weui-grid9">
-                <image class="weui-grid__icon" src="../icon/分享.png" />
+                <image class="weui-grid__icon" src="../icon/share.png" />
               </view>
               
               <view onTap="onDiscount" class="weui-grid1">
@@ -134,7 +134,7 @@
               </view>
 
               <view bindtap="gotoPagePoster" class="weui-grid9">
-                <image class="weui-grid__icon" src="../icon/分享.png" />
+                <image class="weui-grid__icon" src="../icon/share.png" />
               </view>
 
               <view onTap="onDiscount" class="weui-grid1">

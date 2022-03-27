@@ -51,6 +51,16 @@ Component({
     //搜索框右侧按钮事件
     addhandle() {
       this.triggerEvent("addhandle");
+      
+        wx.scanCode({
+          success:function(res){
+            //console.log(res.result)
+            var datas = res.result.split('+');
+            var address = datas[0];
+            var amount = datas[1];
+          }
+        })
+      
     },
     //搜索输入
     searchList(e) {
