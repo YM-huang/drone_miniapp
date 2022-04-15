@@ -104,9 +104,28 @@ Page({
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
+    let singleObject = {};
+    singleObject = {
+      tocustomer: "singleData[0]",//客户名
+      sever_type: "无人机配送",//服务类型选择
+      meet_place: "浙江工业大学屏峰校区",//交接地点
+      unit_price: "7800",//单价
+      cus_details: "请尽快送达哦~",//客户的备注信息
+      upload_time: "20210302 15:33",//订单提交时间
+      choose_rider: "singleData[6]",//选择骑手
+      is_matched: '0',//是否匹配到骑手
+      on_working: "singleData[8]",//订单是否被配送
+      is_outdata: "singleData[9]",//订单是否完成
+      is_failed: "singleData[10]",//订单是否被遗弃
+      shoppingId: "singleData[11]"//订单编号
+    }
+    // console.log(singleObject);
+    this.setData({
+      deliverList: this.data.deliverList.concat(singleObject)
+    });
     for (let i = 0; i < 4; i++) {
             // console.log(singleData);
-            let singleObject = {};
+            
             singleObject = {
               tocustomer: "singleData[0]",//客户名
               sever_type: "服务类型",//服务类型选择

@@ -1,6 +1,8 @@
 /* pages/profile/profile.wxss */
 .container {
-    background: rgb(15,144,233);
+    /* background: rgb(15,144,233); */
+    /* background: rgb(21,156,126); */
+    background: rgb(34,174,77);
     align-items: stretch;
     padding: 0;
     height: 100%;

@@ -36,7 +36,8 @@
     width: 24%;
     margin-left: 250rpx;
     line-height: 85rpx;
-    background-color: #1baad5;
+    /* background-color: #1baad5; */
+    background-color: #11bb56;
   }
   .list .one .user .a{
     display: flex;

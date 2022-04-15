@@ -19,7 +19,9 @@
         "pages/my/collectMoney/collectMoney",
         "pages/my/transfer/transfer",
         "pages/my/addressinput/addressinput",
-        "pages/jiedan/jiedan"
+        "pages/jiedan/jiedan",
+        "pages/my/setting/setting",
+        "pages/my/comment/commment"
     ],
     "window": {
         "enablePullDownRefresh": true,
