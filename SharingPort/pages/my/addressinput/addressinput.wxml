@@ -1,7 +1,7 @@
 <!--pages/addressinput/addressinput.wxml-->
 <view class='input_group'>
-  <text>收款</text>
-  <input value='{{address}}'  bindinput='getAddress' placeholder='输入收款地址'></input>
+  <text>充值</text>
+  <input value='{{address}}'  bindinput='getAddress' placeholder='输入充值金额'></input>
   <view class='copy' bindtap='getCopy'>
     <text>粘贴</text>
   </view>

@@ -82,12 +82,20 @@ Page({
         let content = e.detail.value;
         console.log(content);
         var list = that.data.wxchatLists;
+        let waitting = '欢迎来到飞农使小程序共享端，我是您的云助手。请问有什么可以帮助您？\n请根据您的需求输入回复：\n1.关于小程序\n2.新手指南\n\n如果需要转接人工客服，请点击右下角按钮'
+        if(content.trim() === '1'){
+            waitting = '此小程序为飞农使平台中的客户端，主要进行发布无人机订单，如果您需要接单无人机订单，请转至飞农使平台下的共享端'
+        }
+        else if(content.trim() === '2'){
+            waitting = '新手指南具体信息，选择底部导航栏首页，并在主页查看。'
+        }
         var temp = {
           userImgSrc: '../../image/chat/extra/close_chat.png',
           textMessage: content,
           dataTime: utils.formatTime(new Date()),
           msg_type: 'text',
-          type: 1
+          type: 1,
+          serviceMsg: waitting,
         };
         list.push(temp);
         that.setData({
@@ -103,7 +111,7 @@ Page({
       let vDuration = duration;
       console.log(tempFilePath);
       console.log(vDuration+"这是voice的时长");
-
+    
       var list = that.data.wxchatLists;
       var temp = {
         userImgSrc: '../../image/chat/extra/close_chat.png',
@@ -111,7 +119,8 @@ Page({
         voiceTime: vDuration,
         dataTime: utils.formatTime(new Date()),
         msg_type: 'voice',
-        type: 1
+        type: 1,
+        serviceMsg: '欢迎来到飞农使小程序共享端，我是您的云助手。请问有什么可以帮助您？\n请根据您的需求输入回复：\n1.关于小程序\n2.新手指南\n\n如果需要转接人工客服，请点击右下角按钮',
       };
       list.push(temp);
       that.setData({
@@ -164,7 +173,8 @@ Page({
                   userImgSrc: '../../image/chat/extra/close_chat.png',
                   sendImgSrc:tempFilePath,
                   msg_type: 'img',
-                  type: 1
+                  type: 1,
+                  serviceMsg: '欢迎来到飞农使小程序共享端，我是您的云助手。请问有什么可以帮助您？\n请根据您的需求输入回复：\n1.关于小程序\n2.新手指南\n\n如果需要转接人工客服，请点击右下角按钮',
                 };
                 list.push(temp);
                 that.setData({

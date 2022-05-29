@@ -6,11 +6,11 @@
   </view>
   <view class='menu_bar_item' bindtap='gotoCollect'>
     <image src='../img/getb.png' style='width:50rpx;height:50rpx;'></image>
-    <text class='abc'>收款</text>
+    <text class='abc'>接受积分</text>
   </view>
-  <view bindtap='gotoTransfer' class='menu_bar_item'>
+  <view bindtap="post" class='menu_bar_item'>
     <image src='../img/transb.png' style='width:50rpx;height:50rpx;'></image>
-    <text class='abc'>转账</text>
+    <text class='abc'>积分充值</text>
   </view>
   <view bindtap='gotoHis' class='menu_bar_item'>
     <image src='../img/hisb.png' style='width:50rpx;height:50rpx;'></image>
@@ -49,9 +49,9 @@
     <view style='width:100%;height:1px;background:#fff;'></view>
     <view class='balance_info'>
       <view class='a1'>
-        <text style='float:left;font-weight:bold'>余额</text>
+        <text style='float:left;font-weight:bold'>积分</text>
         <text style='float:right;margin-left:30rpx;border:1px solid #fff;border-radius:10rpx;font-size:26rpx;padding:0 10rpx;font-size:9pt;' bindtap='copy'>复制账户</text>
-        <text style='float:right;border:1px solid #fff;border-radius:10rpx;font-size:26rpx;padding:0 10rpx;font-size:9pt;' bindtap='fresh'>刷新余额</text>
+        <text style='float:right;border:1px solid #fff;border-radius:10rpx;font-size:26rpx;padding:0 10rpx;font-size:9pt;' bindtap='fresh'>刷新积分</text>
       </view>
       <view class='a2'><text>{{balance}}</text></view>
     </view>

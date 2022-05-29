@@ -1,0 +1,170 @@
+/* pages/login/login.wxss
+.header {
+    margin: 90rpx 0 90rpx 50rpx;
+    border-bottom: 1px solid #ccc;
+    text-align: center;
+    width: 650rpx;
+    height: 300rpx;
+    line-height: 450rpx;
+}
+    
+.header image {
+width: 200rpx;
+height: 200rpx;
+}
+
+.content {
+margin-left: 50rpx;
+margin-bottom: 90rpx;
+}
+
+.content text {
+display: block;
+color: #9d9d9d;
+margin-top: 40rpx;
+}
+
+.bottom {
+border-radius: 80rpx;
+margin: 70rpx 50rpx;
+font-size: 35rpx;
+} */
+
+/**app.wxss**/
+.container {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    /*justify-content: space-between;*/
+    box-sizing: border-box;
+  }
+  
+  view {
+    box-sizing: border-box;
+  }
+  
+.wrapper {
+    width: 100%;
+    height: 400rpx;
+    background-color: rgb(34,174,77);
+    position: absolute;
+  }
+  
+  .loginform {
+    height: 400rpx;
+    position: relative;
+    top: 200rpx;
+  }
+  
+  #owl-login {
+    width: 400rpx;
+    height: 200rpx;
+    position: absolute;
+    top: -182rpx;
+    left: 50%;
+    margin-left: -200rpx;
+  }
+  
+  .head {
+    width: 400rpx;
+    height: 200rpx;
+  }
+  
+  .hand {
+    width: 68rpx;
+    height: 68rpx;
+    border-radius: 80rpx;
+    background-color: #472d20;
+    transform: scaleY(0.6);
+    transition: 0.3s ease-out;
+    position: absolute;
+    left: 25rpx;
+    bottom: -16rpx;
+  }
+  
+  .hand-r {
+    left: 315rpx;
+  }
+  
+  .arms {
+    top: 120rpx;
+    position: absolute;
+    width: 100%;
+    height: 80rpx;
+    overflow: hidden;
+  }
+  
+  .arm {
+    width: 80rpx;
+    height: 130rpx;
+    position: absolute;
+    left: 40rpx;
+    top: 80rpx;
+    transition: 0.3s ease-out;
+    transform: rotate(-20deg);
+  }
+  
+  .arm-r {
+    transform: rotate(20deg) scaleX(-1);
+    left: 290rpx;
+  }
+  
+  .hand-password {
+    transform: translateX(95rpx) translateY(-30rpx) scale(0.7);
+  }
+  
+  .hand-r-password {
+    transform: translateX(-90rpx) translateY(-30rpx) scale(0.7);
+  }
+  
+  .arm-password {
+    transform: translateY(-80rpx) translateX(80rpx);
+  }
+  
+  .arm-r-password {
+    transform: translateY(-80rpx) translateX(-72rpx) scaleX(-1);
+  }
+  
+  .control-group {
+    width: 700rpx;
+    height: 300rpx;
+    margin: 30px auto;
+    padding: 20rpx;
+    background-color: white;
+    border: 1px solid #ddd;
+  }
+  
+  .control {
+    width: 650rpx;
+    height: 80rpx;
+    margin: 20rpx auto;
+    padding: 15rpx;
+    font-size: 40rpx;
+    border: 1px solid #ddd;
+    border-radius: 10rpx;
+  }
+  
+  button {
+    margin-top: 40rpx;
+  }
+  
+  /* 自定义 radio 样式 */
+  /* radio .wx-radio-input{
+      border-radius: 50%; 
+      width: 28rpx;
+      height: 28rpx;
+    } */
+    /* 选中后的样式 （可根据需求自己修改） */
+    /* radio .wx-radio-input.wx-radio-input-checked::before{
+      border-radius: 50%;
+      width: 44rpx; 
+      height: 44rpx; 
+      line-height: 44rpx;
+      text-align: center;
+      font-size: 28rpx; 对勾大小
+      color:#fff; 对勾颜色 */
+      /* background: #2facff;
+      border-color: #2facff;
+    } */
+  

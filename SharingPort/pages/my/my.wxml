@@ -1,19 +1,33 @@
 <!--pages/profile/profile.wxml-->
+<!-- <button type='primary' bindtap='getOpenid'>获取用户openid</button><text>{{openid}}</text> -->
 <view class="container">
   <view class="remind-box" wx:if="{{remind}}">
     <image class="remind-img" src="loading.gif"></image>
   </view>
+  
+<!-- <block wx:else>
+  <image bindtap="bindViewTap" class="userinfo-avatar" src="{{userInfo.avatarUrl}}" mode="cover"></image>
+  <view>
+  <text class="userinfo-nickname">{{userInfo.nickName}}</text>
+  </view>
+</block> -->
   <block wx:else>
     <view class="content">
       <view class="hd" style="transform:rotateZ({{angle}}deg);">
-          <image class="logo" src="user.jpg" bindtap="uploadAvatar"></image>
+          <!-- <open-data class="logo" type="userAvatarUrl"></open-data> -->
+          <image class="logo" src="{{userInfo.avatarUrl}}" type="userAvatarUrl" mode="cover"></image>
           <!-- <image class="logocar" src="user.jpg" onTap="onRoadlist"></image> -->
-          <text class="nickname">mmmmmm</text>
+          <view bind="getData">
+          <view>
+          <text class="nickname"  type="userNickName">{{userInfo.nickName}}</text>
+          </view>
+          <!-- <open-data class="nickname" type="userNickName"></open-data> -->
           <text class="lv lvmode">lv.6</text>
-          <text class="title">123木头人</text>
-          <image class="wave" src="wave.png" mode="aspectFill"></image>
+          <!-- 个性签名 -->
+          <!-- <image class="wave" src="wave.png" mode="aspectFill"></image> -->
           <image class="wave wave-bg" src="wave.png" mode="aspectFill"></image>
           <view class="card"></view>
+        </view>
       </view>
 
       <view class="weui-gridsgold">
@@ -34,7 +48,7 @@
           <image class="weui-grid__icon" src="icon/tobeconfirm.png" />
           <view class="weui-grid__label2">
             <!-- <text> -->
-            待确认                                                                                                  
+            已确认                                                                                                  
             <!-- </text> -->
           </view>
         </view>
@@ -42,7 +56,7 @@
           <image class="weui-grid__icon" src="icon/inorder.png" />
           <view class="weui-grid__label2">
             <!-- <text> -->
-            待接单                                                                                                  
+            已接单                                                                                                  
             <!-- </text> -->
           </view>
         </view>
@@ -50,50 +64,34 @@
           <image class="weui-grid__icon" src="icon/signed.png" />
           <view class="weui-grid__label2">
             <!-- <text> -->
-            待签约                                                                                                  
-            <!-- </text> -->
-          </view>
-        </view>
-        <view bindtap="gotoPageHistory" class="weui-gridgoldcontent">
-          <image class="weui-grid__icon" src="icon/obligation.png" />
-          <view class="weui-grid__label2">
-            <!-- <text> -->
-            待付款                                                                                                  
+            已取消                                                                                                  
             <!-- </text> -->
           </view>
         </view>
       </view>
 
       <view class="weui-gridsgoldcontent">
-        <view bindtap="onSignin" class="weui-gridgoldcontent">
+        <view bindtap="gotoPageinvoicing" class="weui-gridgoldcontent">
           <image class="weui-grid__icon" src="icon/check.png" />
           <view class="weui-grid__label2">
             <!-- <text> -->
-            待开票                                                                                                  
+            确认开票                                                                                                 
             <!-- </text> -->
           </view>
         </view>
-        <view bindtap="gotoPageHistory" class="weui-gridgoldcontent">
+        <view bindtap="gotoPageComment" class="weui-gridgoldcontent">
           <image class="weui-grid__icon" src="icon/comment.png" />
           <view class="weui-grid__label2">
             <!-- <text> -->
-            待评价                                                                                                  
+            已评价                                                                                                  
             <!-- </text> -->
           </view>
         </view>
-        <view bindtap="gotoPageHistory" class="weui-gridgoldcontent">
-          <image class="weui-grid__icon" src="icon/cancel.png" />
-          <view class="weui-grid__label2">
-            <!-- <text> -->
-            已取消                                                                                                  
-            <!-- </text> -->
-          </view>
-        </view>
-        <view bindtap="gotoPageHistory" class="weui-gridgoldcontent">
+        <view bindtap="gotoPageconfirmed" class="weui-gridgoldcontent">
           <image class="weui-grid__icon" src="icon/complete.png" />
           <view class="weui-grid__label2">
             <!-- <text> -->
-            已完成                                                                                                  
+            确认完成                                                                                                  
             <!-- </text> -->
           </view>
         </view>       
@@ -120,36 +118,26 @@
             <!-- </text> -->
           </view>
         </view>
-        <view bindtap="onDiscount"  class="weui-gridgoldcontent">
+        <view bindtap="gotoPageSignin"  class="weui-gridgoldcontent">
           <image class="weui-grid__icon" src="icon/point.png" />
           <view class="weui-grid__label2">
             <!-- <text> -->
-            我的积分                                                                                                  
+            我的考勤                                                                                                
             <!-- </text> -->
           </view>
         </view>
-        <view bindtap="gotoPageSignin" class="weui-gridgoldcontent">
-          <image class="weui-grid__icon" src="icon/signup.png" />
-          <view class="weui-grid__label2">
+        <view bindtap="" class="weui-gridgoldcontent">
+        <!-- <view bindtap="gotoPageSignin" class="weui-gridgoldcontent"> -->
+          <!-- <image class="weui-grid__icon" src="icon/signup.png" /> -->
+          <!-- <view class="weui-grid__label2"> -->
             <!-- <text> -->
-            签到                                                                                                  
+            <!-- 签到                                                                                                   -->
             <!-- </text> -->
-          </view>
+          <!-- </view> -->
         </view>
-        <view bindtap="onFriend" class="weui-gridgoldcontent">
-          <image class="weui-grid__iconadd" src="add.png" />
-        </view>
-      </view>
-
-      <view class="weui-gridsmy">
-        <view bindtap="categoryTap" class="weui-gridmy">
-          <view class="weui-grid__labelmy">
-            <image class="weui-grid__icon2" src="icon/check2.png" />
-            <!-- <text> -->
-            我的飞手                                                                                                 
-            <!-- </text> -->
-          </view>
-        </view>
+        <!-- <view bindtap="onFriend" class="weui-gridgoldcontent"> -->
+          <!-- <image class="weui-grid__iconadd" src="add.png" /> -->
+        <!-- </view> -->
       </view>
 
       <view class="weui-gridsmy">
@@ -163,16 +151,16 @@
         </view>
       </view>
 
-      <view class="weui-gridsmy">
-        <view bindtap="categoryTap" class="weui-gridmy">
+      <!-- <view class="weui-gridsmy">
+        <view bindtap="gotoPageService" class="weui-gridmy">
           <view class="weui-grid__labelmy">
-            <image class="weui-grid__icon2" src="icon/service.png" />
+            <image class="weui-grid__icon2" src="icon/service.png" /> -->
             <!-- <text> -->
-            客服中心                                                                                                  
+            <!-- 客服中心                                                                                                   -->
             <!-- </text> -->
-          </view>
+          <!-- </view>
         </view>
-      </view>
+      </view> -->
 
       <view class="weui-gridsmy">
         <view bindtap="gotoPageSetting" class="weui-gridmy">

@@ -1,5 +1,61 @@
 {
-    "setting": {},
-    "condition": {},
-    "description": "项目私有配置文件。此文件中的内容将覆盖 project.config.json 中的相同字段。项目的改动优先同步到此文件中。详见文档：https://developers.weixin.qq.com/miniprogram/dev/devtools/projectconfig.html"
+    "setting": {
+        "compileHotReLoad": true
+    },
+    "description": "项目私有配置文件。此文件中的内容将覆盖 project.config.json 中的相同字段。项目的改动优先同步到此文件中。详见文档：https://developers.weixin.qq.com/miniprogram/dev/devtools/projectconfig.html",
+    "condition": {
+        "miniprogram": {
+            "list": [
+                {
+                    "name": "问题2",
+                    "pathName": "pages/index/submit/process1/process1",
+                    "query": "",
+                    "scene": null
+                },
+                {
+                    "name": "问题1",
+                    "pathName": "pages/index/submit/submit",
+                    "query": "",
+                    "scene": null
+                },
+                {
+                    "name": "问题3",
+                    "pathName": "pages/index/submit/process2/process2",
+                    "query": "",
+                    "scene": null
+                },
+                {
+                    "name": "问题6",
+                    "pathName": "pages/index/submit/process5/process5",
+                    "query": "",
+                    "scene": null
+                },
+                {
+                    "name": "my",
+                    "pathName": "pages/my/my",
+                    "query": "",
+                    "scene": null
+                },
+                {
+                    "name": "submit",
+                    "pathName": "pages/index/submit/submit",
+                    "query": "",
+                    "scene": null
+                },
+                {
+                    "name": "history",
+                    "pathName": "pages/my/history/history",
+                    "query": "",
+                    "scene": null
+                },
+                {
+                    "name": "tank",
+                    "pathName": "pages/my/rank/rank",
+                    "query": "",
+                    "scene": null
+                }
+            ]
+        }
+    },
+    "projectname": "miniprogram-3"
 }

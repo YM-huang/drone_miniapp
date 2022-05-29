@@ -13,9 +13,9 @@
           </view>
         </view>
       </view>
-      <view >
+      <!-- <view > -->
         <!-- 默认展示  语音 -->
-        <view class="chat-content-list-time">{{normalDataTime}}</view>
+        <!-- <view class="chat-content-list-time">{{normalDataTime}}</view>
         <view class="chat-content-list right" >
           <image class="chat-content-list-avatar "  src="../../images/chat/voice/speak.png"></image>
           <view class="chat-content-list-content" bindlongtap="delMsg" data-index="{{index}}">
@@ -26,7 +26,7 @@
               </view>
           </view>
         </view>
-      </view>
+      </view> -->
       <view wx:for="{{wxchatLists}}" wx:key="{{index}}">
         <!-- ↑ wx:for="{{wxchatLists}}" wx:key="{{index}}" -->
         <view class="chat-content-list-time">{{item.dataTime}}</view>
@@ -54,11 +54,25 @@
               </view>
           </view>
         </view>
+         <!-- 回答 -->
+            <view class="chat-content-list " wx:if='{{ item.serviceMsg }}'>
+                <image class="chat-content-list-avatar "  src="../../images/chat/voice/speak.png"></image>
+                <view class="chat-content-list-content" bindlongtap="delMsg" data-index="{{index}}">
+                    <view class="chat-content-list-msg"> 
+                        <text selectable='true'>{{ item.serviceMsg }}</text>
+                    </view>
+                </view>
+            </view>
       </view>
       
     </scroll-view>
     
     
     <template is="chat-input" data="{{inputObj:inputObj,textMessage:textMessage,showVoicePart:true}}" />
+
+    <!-- 人工客服 -->
+    <button plain='true' open-type="contact"  class="circle">
+    <image src='../my/icon/39.png' class='image'></image>
+  </button>
 </view>
 

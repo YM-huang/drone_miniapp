@@ -1,5 +1,5 @@
 /* pages/signIn2/signIn2.wxss */
-.sign-new{ width: 100%; height: 450rpx; overflow: hidden;   position: relative;}
+.sign-new{ width: 100%; height: 450rpx; overflow: hidden;   position:fixed;top:10%}
 .sign-new .in{ padding: 40rpx 30rpx; height: 100%; box-sizing: border-box;  }
 .sign-new .new-head{ width: 100%; height:200rpx; overflow: hidden;}
 .sig-tl{ position: absolute; left: 30rpx; top: 40rpx; font-size: 28rpx;}

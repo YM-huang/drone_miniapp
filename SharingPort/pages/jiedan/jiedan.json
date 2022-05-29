@@ -1,0 +1,6 @@
+{
+  "component": true,
+  "usingComponents": {
+    "SearchBar": "../index/searchbar/index"
+  }
+}

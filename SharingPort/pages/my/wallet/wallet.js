@@ -5,8 +5,8 @@ Page({
      * 页面的初始数据
      */
     data: {
-        address:'中国农业银行',
-        balance:'1000'
+        address:'积分卡',
+        balance:'0'
     },
 
     /**
@@ -64,6 +64,31 @@ Page({
     onShareAppMessage: function () {
 
     },
+    post:function(){//测试
+        wx.showToast({
+          title: '敬请期待...',
+        })
+        wx.request({
+          url: '', 
+          data: {
+            id:1
+          },   
+          header: { 'content-type': 'application/x-www-form-urlencoded' },
+          method: 'POST',
+          dataType: 'json',
+          responseType: 'text',
+          success: (result) => {
+            console.log(result.data);
+          },
+          fail: () => {
+            console.log("post failed");
+          },
+          complete: () => {
+            console.log("post complete");
+          }
+    
+        })
+      },
     copy:function(){
         var _this = this;
         wx.setClipboardData({
@@ -95,7 +120,7 @@ Page({
       },
       gotoTransfer:function(){
         wx.navigateTo({
-          url: '../transfer/transfer',
+          url: '../addressinput/addressinput',
         })
       },
       fresh:function(){

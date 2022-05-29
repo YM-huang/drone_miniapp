@@ -1,13 +1,12 @@
 <view class="container">
       <view class="page-section-demo">
 
-            <view class="weui-grids">
-              
+        <view class="weui-grids" wx:for="{{finshOrder}}" wx:for-index="i" wx:if="{{finshOrder[i].is_matched}}">
               <view onTap="onDiscount" class="weui-grid8">
                 <view class="weui-grid__label6">
                   <am-icon type="location" size="18" style="color: rgb(94,208,254);" />
                   <!-- <text> -->
-                  无人机租赁                                                                                                 
+                  无人机租赁                                                                              
                   <!-- </text> -->
                 </view>
               </view>
@@ -19,7 +18,8 @@
               <view onTap="onDiscount" class="weui-grid1">
                 <view class="weui-grid__label3">
                   <!-- <text> -->
-                  小型无人机                                                                                                 
+                  <view>{{finshOrder[i].sever_type}}
+                  </view>                                                                                                 
                   <!-- </text> -->
                 </view>
               </view>
@@ -27,7 +27,8 @@
               <view onTap="onDiscount" class="weui-grid2">
                   <view class="lv lvmode">
                   <!-- <text> -->
-                    已扣款                                                                                                
+                    <view>
+                      已接单</view>                                                                                    
                   <!-- </text> -->
                 </view>
               </view>
@@ -35,133 +36,12 @@
               <view onTap="onDiscount" class="weui-grid7">
                   <view class="weui-grid__label7">
                   <!-- <text> -->
-                  租赁时间:  2021-7-17  14:08:24                                                                                                 
+                  租赁开始时间: {{finshOrder[i].t_starttime}}                                                                                           
                   <!-- </text> -->
                 </view>
                 <view class="weui-grid__label7">
                   <!-- <text> -->
-                  支付时间:  2021-7-17  14:08:47                                                                                                 
-                  <!-- </text> -->
-                </view>
-              </view>
-
-              <view onTap="onDiscount" class="weui-grid3">
-                  <view class="line"></view>
-              </view>
-
-              <view onTap="onDiscount" class="weui-grid4">
-                  <view class="weui-grid__label4">
-                    <!-- <text> -->
-                    查看详情                                                                                                 
-                    <!-- </text> -->
-                  </view>
-              </view>
-
-              <view onTap="onDiscount" class="weui-grid5">
-                  <am-icon class="weui-grid__label5" type="right" size="20" />
-              </view>
-            </view>
-
-            <view class="weui-grids">
-              
-              <view onTap="onDiscount" class="weui-grid8">
-                <view class="weui-grid__label6">
-                  <am-icon type="location" size="18" style="color: rgb(94,208,254);" />
-                  <!-- <text> -->
-                  无人机租赁                                                                                                 
-                  <!-- </text> -->
-                </view>
-              </view>
-
-              <view bindtap="gotoPagePoster" class="weui-grid9">
-                <image class="weui-grid__icon" src="../icon/share.png" />
-              </view>
-              
-              <view onTap="onDiscount" class="weui-grid1">
-                <view class="weui-grid__label3">
-                  <!-- <text> -->
-                  小型无人机                                                                                                 
-                  <!-- </text> -->
-                </view>
-              </view>
-
-              <view onTap="onDiscount" class="weui-grid2">
-                  <view class="lv lvmode">
-                  <!-- <text> -->
-                    已扣款                                                                                                
-                  <!-- </text> -->
-                </view>
-              </view>
-
-              <view onTap="onDiscount" class="weui-grid7">
-                  <view class="weui-grid__label7">
-                  <!-- <text> -->
-                  租赁时间:  2021-7-17  14:08:24                                                                                                 
-                  <!-- </text> -->
-                </view>
-                <view class="weui-grid__label7">
-                  <!-- <text> -->
-                  支付时间:  2021-7-17  14:08:47                                                                                                 
-                  <!-- </text> -->
-                </view>
-              </view>
-
-              <view onTap="onDiscount" class="weui-grid3">
-                  <view class="line"></view>
-              </view>
-
-              <view onTap="onDiscount" class="weui-grid4">
-                  <view class="weui-grid__label4">
-                    <!-- <text> -->
-                    查看详情                                                                                                 
-                    <!-- </text> -->
-                  </view>
-              </view>
-
-              <view onTap="onDiscount" class="weui-grid5">
-                  <am-icon class="weui-grid__label5" type="right" size="20" />
-              </view>
-            </view>
-            <view class="weui-grids">
-              
-              <view onTap="onDiscount" class="weui-grid8">
-                <view class="weui-grid__label6">
-                  <am-icon type="location" size="18" style="color: rgb(94,208,254);" />
-                  <!-- <text> -->
-                  无人机租赁                                                                                                 
-                  <!-- </text> -->
-                </view>
-              </view>
-
-              <view bindtap="gotoPagePoster" class="weui-grid9">
-                <image class="weui-grid__icon" src="../icon/share.png" />
-              </view>
-
-              <view onTap="onDiscount" class="weui-grid1">
-                <view class="weui-grid__label3">
-                  <!-- <text> -->
-                  小型无人机                                                                                                 
-                  <!-- </text> -->
-                </view>
-              </view>
-
-              <view onTap="onDiscount" class="weui-grid2">
-                  <view class="lv lvmode">
-                  <!-- <text> -->
-                    已扣款                                                                                                
-                  <!-- </text> -->
-                </view>
-              </view>
-
-              <view onTap="onDiscount" class="weui-grid7">
-                  <view class="weui-grid__label7">
-                  <!-- <text> -->
-                  租赁时间:  2021-7-17  14:08:24                                                                                                 
-                  <!-- </text> -->
-                </view>
-                <view class="weui-grid__label7">
-                  <!-- <text> -->
-                  支付时间:  2021-7-17  14:08:47                                                                                                 
+                  租赁结束时间：{{finshOrder[i].t_endtime}}                                                                                           
                   <!-- </text> -->
                 </view>
               </view>

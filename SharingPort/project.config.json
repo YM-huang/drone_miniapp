@@ -1,5 +1,15 @@
 {
     "description": "项目配置文件，详见文档：https://developers.weixin.qq.com/miniprogram/dev/devtools/projectconfig.html",
+    "cloudfunctionRoot": "cloud/",
+    "packOptions": {
+        "ignore": [
+            {
+                "value": ".eslintrc.js",
+                "type": "file"
+            }
+        ],
+        "include": []
+    },
     "setting": {
         "urlCheck": true,
         "es6": false,
@@ -19,13 +29,14 @@
         "uploadWithSourceMap": true,
         "compileHotReLoad": false,
         "lazyloadPlaceholderEnable": false,
-        "useMultiFrameRuntime": false,
+        "useMultiFrameRuntime": true,
+        "useApiHook": true,
+        "useApiHostProcess": true,
         "babelSetting": {
             "ignore": [],
             "disablePlugins": [],
             "outputPath": ""
         },
-        "enableEngineNative": false,
         "useIsolateContext": true,
         "userConfirmedBundleSwitch": false,
         "packNpmManually": false,
@@ -35,12 +46,19 @@
         "minifyWXML": true,
         "showES6CompileOption": false,
         "useCompilerPlugins": false,
-        "useStaticServer": true,
-        "ignoreUploadUnusedFiles": true
+        "useStaticServer": true
     },
     "compileType": "miniprogram",
+    "libVersion": "2.23.4",
+    "projectname": "miniprogram-3",
     "simulatorType": "wechat",
     "simulatorPluginLibVersion": {},
+    "appid": "wx145f71cc609485c9",
+    "editorSetting": {
+        "tabIndent": "insertSpaces",
+        "tabSize": 4
+    },
+    "cloudfunctionTemplateRoot": "cloudfunctionTemplate/",
     "condition": {
         "search": {
             "list": []
@@ -60,15 +78,5 @@
         "miniprogram": {
             "list": []
         }
-    },
-    "editorSetting": {
-        "tabIndent": "insertSpaces",
-        "tabSize": 4
-    },
-    "libVersion": "2.23.3",
-    "packOptions": {
-        "ignore": [],
-        "include": []
-    },
-    "appid": "wx7b54b78f2bcab3df"
+    }
 }

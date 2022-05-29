@@ -126,7 +126,7 @@
     align-items: center;
   }
   .mask .confirmBox{
-    height: 550rpx;
+    height: 580rpx;
     width: 600rpx;
     background-color: #fff;
     border-radius: 10rpx;

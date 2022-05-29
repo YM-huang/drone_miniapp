@@ -39,7 +39,7 @@ scroll-view{
 .chat-content-list.right > .chat-content-list-content .chat-content-list-msg{
     margin-left: 0;
     /* margin-right: 14rpx; */
-    background: rgb(18,183,245);
+    background: rgb(135,190,45);
     color: #fff;
 }
 
@@ -50,7 +50,8 @@ scroll-view{
     border-top-right-radius: 43rpx;
     border-bottom-right-radius: 0;
     border-bottom-left-radius: 43rpx;
-    background-color: rgb(18,183,245);
+    /* background-color: rgb(18,183,245); */
+    background-color: rgb(135,190,45);
     font-size: 32rpx;
     color: #fff;
     position: relative;
@@ -263,6 +264,26 @@ scroll-view{
 .over-read-tip.active{
   display: block;
 }
+
+/* .chatLabel{ min-height: 90rpx; position: relative; margin-bottom: 20rpx; padding:0 100rpx 0 66rpx; overflow: hidden; text-align: right; }
+.chatLabel.auto{ padding:5rpx 50rpx 0 100rpx; text-align: left;}
+.chatLabel .avatar{ position: absolute; top:0; right: 0; border-radius: 50%; width: 80rpx; height: 80rpx; overflow: hidden;}
+.chatLabel .articleBox{ display: inline-block; border-radius: 20rpx 0 20rpx 20rpx; background: #409eff; padding: 20rpx 30rpx; overflow: hidden; font-size:28rpx; color: #fff; line-height: 38rpx; min-height:30rpx; text-align: justify; max-width:420rpx; word-break: break-all; } */
+
+.circle[plain] {
+    padding: 0;
+    border: none;
+    width: 138rpx;
+    height: 138rpx;
+    bottom: 10%;
+    position: fixed; 
+    right: 5%;
+    display: flex;
+  }
+  .image {
+    width: 138rpx;
+    height: 138rpx;
+  }
 
 
 

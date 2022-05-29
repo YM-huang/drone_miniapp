@@ -1,5 +1,5 @@
 .container {
-    background: rgb(15,144,233);
+    background: rgb(34,174,77);
     align-items: stretch;
     padding: 0;
     height: 100%;
@@ -167,7 +167,7 @@
     position:relative;
     float:left;
     padding:20px 10px;
-    width:10%;
+    width:20%;
     height: 60px;
     background-color:white;
     box-sizing:border-box;
@@ -176,10 +176,10 @@
     /* border-bottom:1rpx solid #d9d9d9; */
     /* border-radius: 12px; */
   }
-  .weui-grid_active{
-    /* background-color:#ececec; */
-    /* animation: swing 2s linear 0s 1 forwards */
-  }
+  /* .weui-grid_active{
+    background-color:#ececec;
+    animation: swing 2s linear 0s 1 forwards
+  } */
   @keyframes swing {
       0%, 100% {
           transform: perspective(200px) rotateX(0);
@@ -238,7 +238,7 @@
     font-weight:bold;
     margin-top:-2px;
     display:block;
-    text-align:right;
+    text-align:center;
     color:rgb(245, 187, 112);
     font-size:14pt;
     white-space:nowrap;
@@ -249,7 +249,7 @@
     font-weight:bold;
     margin-top:-2px;
     display:block;
-    text-align:left;
+    text-align:center;
     color:#000;
     font-size:14pt;
     white-space:nowrap;

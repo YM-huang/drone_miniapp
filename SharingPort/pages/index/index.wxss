@@ -1,60 +1,70 @@
+
 .writeInformation{
-  box-sizing: border-box;
-  padding-top: 0rpx;
-  height: 425rpx;
+  /* margin-bottom: 226rpx;
+  height: 730rpx;
+  padding-top: 88rpx;
+  font-size: 36rpx;
+  display: flex;
+  justify-content: center; */
+  margin-bottom: 226rpx;
+  height: 730rpx;
+  padding-top: 128rpx;
+  font-size: 36rpx;
   display: flex;
   justify-content: center;
-  /* background-color: #fff; */
-  /* margin-bottom: -120rpx; */
-  /* background-image: url('../../ico/background.jpg'); */
 }
-.writeInformation .post{
-  margin-top: 200rpx;
-  height: 450rpx;
-  width: 450rpx;
-  border-radius:50%; 
-  background-color: #fff;
+.writeInformation view{
+  z-index: 99;
+  margin-top: 550rpx;
+  margin-right: 10rpx;
+  /* margin-top: 7rpx; */
+}
+.writeInformation switch{
+  z-index: 99;
+  margin-top: 545rpx;
+}
+.sun{
+  width: 440rpx;
+  height: 440rpx;
   position: absolute;
+  top: 175rpx;
+  left: 21%;
 }
-.writeInformation .post image{
-  width: 100%;
+.sun image{
   height: 100%;
-}
- .text{
-   margin-top:250rpx; 
-  color: rgb(34,174,77);
-  font-size: 50rpx;
   width: 100%;
-  text-align: center;
-  font-weight: 550;
-  /* text-shadow:2px 1px 6px #1baad5; */
 }
-/* .input{
- margin: 0 auto;
- display: flex;
- align-items: center;
+.Mask{
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background-color: rgba(21,156,126,0.5);
+  z-index: 98;
+  display: flex;
+  justify-content: center;
+  /* align-items: center; */
 }
-.input image{
-  width: 50rpx;
-  height: 50rpx;
-  margin-left: -70rpx;
-  z-index: 2;
-} */
-  .buttonArea{
-    margin: 0 auto ;
+.Mask image{
+  height: 440rpx;
+  width: 440rpx;
+  margin-top: 75rpx;
+}
+.buttonArea{ 
+    margin: 10px auto ;
     width: 90%;
     display: flex;
-    
     padding: 16rpx;
     box-sizing: border-box;
     background-color: #fff;
     box-shadow: 3px 5px 3px -5px rgba(0, 0, 0, 0.5);
-    /* text-align: center; */
     border-radius: 15rpx;
-    /* font-size: 36rpx; */
     justify-content: space-between;
-    /* border: #000 solid 1px; */
     flex-wrap: wrap;
+    position: absolute;
+    left: 5%;
+    top: 763rpx;
   }
  .button{
    border-radius: 10rpx;
@@ -66,29 +76,26 @@
   box-sizing: border-box;
   /* border-radius: 0 */
   background-color: #fff;
-
+  margin-top: 10rpx;
+  margin-bottom: 10rpx;
 }
 .button image{
   width: 100rpx;
   height: 100rpx;
   margin-bottom: 20rpx;
 }
- .button:hover{
-  background-color: #f5f5f5;
-}
+
 .avalibleList{
   height: 46%;
   width: 96%;
   background-color: #fff;
    color:#000;
 }
-.avalibleList:hover{
-  background-color: #f5f5f5;
-}
+
 .list{
-    margin-top: 30rpx;
+    margin-top: 160rpx;
     padding-bottom: 150rpx;
-    color: white;
+    color: #000;
   }
   .list .one{
     background-color: #fff;
@@ -101,6 +108,7 @@
     border-radius: 10rpx;
     margin: 0 auto 30rpx;
     color: #000;
+    box-shadow: 3px 5px 3px -5px rgba(0, 0, 0, 0.5);
   }
   .list .one .user open-data{
      height: 12vw;
@@ -115,6 +123,13 @@
   .list .one .user .info{
     width: 83vw;
     margin-left: 20rpx;
+    display: flex;
+  }
+  .list .one .user .info button{
+    width: 28%;
+    margin-left: 140rpx;
+    line-height: 105rpx;
+    background-color: #1baad5;
   }
   .list .one .user .a{
     display: flex;
@@ -131,16 +146,8 @@
   .list .one .user .b .money{
   color: #000;
   }
-  .list .one .user .b .orderButton{
-   width: 160rpx;
-  height: 90rpx;
-  background-color: #1baad5;
-  margin-top: -35rpx;
-  text-align: center;
-  line-height: 90rpx;
-  color: #fff;
-  border-radius: 10rpx;
-  font-size: 36rpx;
+  .list .one .user .b .finish{
+    color: #000;
   }
   .list .one .col{
     color: #000;
@@ -159,14 +166,9 @@
     height: 30rpx;
     margin-right: 10rpx;
   }
-  /* .sure{
-    
-    justify-content: space-between;
-    
-    font-size: 25rpx;
-    color: rgb(182, 177, 177);
-  } */
-.mask{
+
+
+  .mask{
   position: fixed;
   top: 0;
   bottom: 0;
@@ -185,7 +187,6 @@
   border-radius: 10rpx;
   box-sizing: border-box;
   padding: 20rpx;
-  color: #000;
 }
 .mask .confirmBox .title{
   width: 100%;
@@ -215,13 +216,4 @@
   color: #fff;
   height: 83rpx;
   border-radius: 10rpx;
-}
-
-.share-img {
-  border: 0px;
-  height: 24px;
-  width: 24px;
-  right: 10px;
-  bottom: 20px;
-  position: fixed;
 }

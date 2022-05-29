@@ -1,12 +1,17 @@
-<!--pages/jiedan/working/working.wxml-->
+<!-- <view class="writeInformation">
+  </view> -->
+<view>
   <view class="informationitem">
     <view class="text">
       <view class="image">
-        <image src="../../../ico/export services.png"></image> 
+       <image src="../../../ico/export services.png"></image> 
       </view>
-      <view>取一个昵称</view> 
+      <view>是否同意飞农使公开你的头像和昵称</view>
     </view>
-    <input class="input" bindblur="getNickname" cursor-spacing="140" placeholder="{{nick_name}}" type="text" confirm-type="done"></input>
+    <radio-group bindchange="getP">
+        <radio value="是">是</radio>
+        <radio value="否">否</radio>
+    </radio-group>
   </view>
 
   <view class="informationitem">
@@ -14,9 +19,9 @@
       <view class="image">
         <image src="../../../ico/company.png"></image>
       </view>
-      <view>填写你的编号</view> 
+      <view>填写可以接单的时间（或任意）</view> 
     </view>
-    <input class="input" bindblur="getSchoolNum" cursor-spacing="140" placeholder="{{school_num}}" type="text" confirm-type="done"></input>
+    <input class="input" bindblur="timeBind" cursor-spacing="140" placeholder="点击填写接单时间" type="text" confirm-type="done"></input>
   </view>
 
   <view class="informationitem">
@@ -24,14 +29,73 @@
       <view class="image">
         <image src="../../../ico/rmb.png"></image> 
       </view>
-      <view>填写你的个性签名</view>
+      <view>填写可以配送的地点(或任意)</view>
     </view>
-    <input class="input" bindblur="getSign" type="text" cursor-spacing="140" placeholder="{{my_Sign}}"   confirm-type="done">
+    <input class="input" bindblur="locationBind" type="text" cursor-spacing="140" placeholder="点击填写配送区域"   confirm-type="done">
     </input>
   </view>
 
-
-  <view class="confirmArea">
-    <button class="submit"  bindtap="confirm" lang="zh_CN">提交信息</button>
+  <view class="informationitem">
+    <view class="text">
+      <view class="image">
+        <image src="../../../ico/editor.png"></image> 
+      </view>
+      <view>选择你一次可以带的最大重量:{{user_max_weight}}(kg)</view>
+    </view>
+    <picker class="pickerbox" bindchange="choosemaxweight" value="{{index}}" range="{{maxrange}}">
+        <view class="clickArea">
+          点击选择
+        </view>
+      </picker>
+   
   </view>
 
+  <view class="informationitem">
+    <view class="text">
+      <view class="image">
+        <image src="../../../ico/editor.png"></image> 
+      </view>
+      <view>选择你一次可以带的最大尺寸:{{user_max_size}}(m2)</view>
+    </view>
+    <picker class="pickerbox" bindchange="choosemaxsize" value="{{index}}" range="{{maxrange}}">
+        <view class="clickArea">
+          点击选择
+        </view>
+      </picker>
+   
+  </view>
+  
+    <view class="informationitem">
+    <view class="text">
+      <view class="image">
+        <image src="../../../ico/company.png"></image>
+      </view>
+      <view>备注(想对顾客说的话)</view> 
+    </view>
+    <input class="input" bindblur="detailBind" placeholder="点击填写备注" cursor-spacing="140" type="text" confirm-type="done"></input>
+  </view>
+
+  <view class="confirmArea">
+    <button class="submit" open-type='getUserInfo'  bindtap="confirm" lang="zh_CN" bindgetuserinfo="onGotUserInfo">提交信息</button>
+  </view>
+
+</view>
+
+  <view class="mask" wx:if="{{confirmBoxVisible}}">
+    <view class="confirmBox">
+      <view class="title">
+        <view>确认信息</view>
+        <image src="../../../ico/close.png" bindtap="close"></image>
+      </view>
+
+      <view class="content">
+        <view class="text">允许客户获得你的姓名:{{permission}}</view>
+        <view class="text">可配送时间:{{ava_time}}</view>
+        <view class="text">可配送区域:{{locationave}}</view>
+        <view class="text">单次最大的重量:{{user_max_weight}}(kg)</view>
+        <view class="text">单次最大的尺寸:{{user_max_size}}(m2)</view>
+        <view>备注:{{details}}</view>
+        <button bindtap="submit">确     认</button>
+      </view>
+    </view>
+  </view>

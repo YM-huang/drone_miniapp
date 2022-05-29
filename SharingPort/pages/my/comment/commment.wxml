@@ -1,0 +1,39 @@
+<!--pages/userinfo/history/history.wxml-->
+<view class='list'>
+      <block wx:for="{{finshOrder.length}}" wx:for-index="i">
+          <view class='one'>
+              <view class='user'>
+              <!-- 这里还要用把用户头像发送到服务器 然后返回src  根据大侠提交的表单数据可来反馈 -->
+                 <open-data type="userAvatarUrl"></open-data>
+                  <view class='info'>
+                     <view class='a'>
+                        <text>{{finshOrder[i].sever_type}}</text>
+                     </view>
+                     <view class='b'>
+                       <!-- 接单情况和表单发布时间 -->
+                        <view class='money'>{{finshOrder[i].upload_time}}</view>
+  <text class='finish' wx:if="{{finshOrder[i].is_matched}}">已送达</text> 
+                        <text class='finish' wx:else>交易失败</text>
+                     </view>
+                  </view>
+              </view>
+              <!--允许时间 -->
+               <view class='col'>
+                 <image src='/ico/time.png'></image>订单金额：￥{{finshOrder[i].unit_price}}
+              </view>
+              <!-- 备注信息 -->
+              <view class='col' wx:if="{{finshOrder[i].is_matched}}">
+                 <image src='/ico/info.png'></image>骑手：{{finshOrder[i].f_name}}
+              </view>
+              <view class='col' wx:else>
+                 <image src='/ico/info.png'></image>飞手：匹配失败
+              </view>
+              <view class='col'>
+                  <image src='/ico/info.png'></image>交接地点：{{finshOrder[i].meet_place}}
+              </view>
+              <view class='col'>
+                  <image src='/ico/info.png'></image>评价：{{finshOrder[i].cus_details}}
+              </view>
+          </view>
+      </block>
+</view>
