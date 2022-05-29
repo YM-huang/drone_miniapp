@@ -20,7 +20,7 @@ Page({
         address:e.detail.value
       })
     },
-    submit:function(){
+    async submit(){
       var address = wx.getStorageSync('address');
       if(this.data.address==''){
         wx.showToast({
@@ -35,44 +35,60 @@ Page({
         })
         return;
       }
-      var _this = this;
-      //判断地址是否存在
-      wx.request({
-        url: getApp().globalData.baseUrl+'/isExit',
-        method: 'POST',
-        data: {
-          to: _this.data.address
-        },
-        header: {
-          'content-type': 'application/x-www-form-urlencoded' // 默认值
-        },
-        success:function(res){
-          if(res.data){
-            //不存在
-            wx.showToast({
-              title: '地址不存在',
-              image:'../img/error.png'
-            })
-            return ;
-          }else{
-            //地址存在
-            wx.navigateTo({
-              url: '../amountinput/amountinput?address='+_this.data.address,
-            })
-          }
-        }
+      let that = this;
+      var c1 = new wx.cloud.Cloud({
+        // 资源方 小程序A的 AppID
+        resourceAppid: 'wx145f71cc609485c9',
+        // 资源方 小程序A的 的云开发环境ID
+        resourceEnv: 'cloud1-4g02yqp27aa7e10a',
+    })
+      // 跨账号调用，必须等待 init 完成
+          // init 过程中，资源方小程序对应环境下的 cloudbase_auth 函数会被调用，并需返回协议字段（见下）来确认允许访问、并可自定义安全规则
+      await c1.init()
+      // wx.cloud.database().collection('xiaoshitou').get()
+      wx.cloud.callFunction({
+        name:'getOpenid',
+      }).then(res=>{
+          // console.log(res)//res就将appid和openid返回了
+          //做一些后续操作，不用考虑代码的异步执行问题。
+          let _openid=res.result.OPENID
+          c1.database().collection("cus_info").where({
+            _openid: res.result.OPENID
+          }).get()
+          .then(res=>{
+            // console.log(res)
+            c1.database().collection("cus_info").where({
+              _openid: _openid
+            }).get()
+            .then(res=>{
+              // console.log(res.data[0].userInfo)
+              let userInfo=res.data[0].userInfo.nickName;
+                this.setData({
+                  userInfo:userInfo
+                })
+                // console.log(userInfo)
+            let nickName=userInfo;
+            var data1={address,nickName}
+            //确认订单后更新订单状态
+              wx.cloud.callFunction({
+                name:"updateMoney",
+                data:{
+                  address:data1.address,
+                  nickName:nickName
+                }
+              }).then(res=>{
+                // console.log(res)
+              })
+  
+              wx.showToast({
+                title: '充值成功',
+              })
+        })
       })
+            // console.log(userInfo)
+            })
     },
-    getCopy:function(){
-      var _this = this;
-      wx.getClipboardData({
-        success:function(res){
-          _this.setData({
-            address:res.data
-          })
-        }
-      })
-    },
+
     /**
      * 生命周期函数--监听页面初次渲染完成
      */

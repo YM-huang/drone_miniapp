@@ -1,0 +1,68 @@
+<view class="container">
+      <view class="page-section-demo">
+
+            <view class="weui-grids" wx:for="{{deliverList.length}}" wx:for-index="i" wx:if="{{deliverList[i].t_state==9}}">
+
+              <view onTap="onDiscount" class="weui-grid8">
+                <view class="weui-grid__label6">
+                  <am-icon type="location" size="18" style="color: rgb(94,208,254);" />
+                  <!-- <text> -->
+                  无人机租赁                                                                              
+                  <!-- </text> -->
+                </view>
+              </view>
+
+              <view bindtap="gotoPagePoster" class="weui-grid9">
+                <image class="weui-grid__icon" src="../icon/share.png" />
+              </view>
+
+              <view onTap="onDiscount" class="weui-grid1">
+                <view class="weui-grid__label3">
+                  <!-- <text> -->
+                  <view>{{deliverList[i].sever_type}}
+                  </view>                                                                                                 
+                  <!-- </text> -->
+                </view>
+              </view>
+
+              <view onTap="onDiscount" class="weui-grid2">
+                  <view class="lv lvmode">
+                  <!-- <text> -->
+                    <view>
+                      已取消</view>                                                                                         
+                  <!-- </text> -->
+                </view>
+              </view>
+
+              <view onTap="onDiscount" class="weui-grid7">
+                  <view class="weui-grid__label7">
+                  <!-- <text> -->
+                  租赁开始时间: {{deliverList[i].t_starttime}}                                                                                           
+                  <!-- </text> -->
+                </view>
+                <view class="weui-grid__label7">
+                  <!-- <text> -->
+                  租赁结束时间：{{deliverList[i].t_endtime}}                                                                                           
+                  <!-- </text> -->
+                </view>
+              </view>
+
+              <view onTap="onDiscount" class="weui-grid3">
+                  <view class="line"></view>
+              </view>
+
+              <view onTap="onDiscount" class="weui-grid4">
+                  <view class="weui-grid__label4">
+                    <!-- <text> -->
+                    查看详情                                                                                                 
+                    <!-- </text> -->
+                  </view>
+              </view>
+
+              <view onTap="onDiscount" class="weui-grid5">
+                  <am-icon class="weui-grid__label5" type="right" size="20" />
+              </view>
+            </view>
+
+    </view>
+</view>

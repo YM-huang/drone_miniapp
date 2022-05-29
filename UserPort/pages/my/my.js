@@ -51,6 +51,11 @@ Page({
           url: '/pages/my/reqtickets/reqtickets',//要跳转到的页面路径
     })  
  },
+ gotoPageCancle(){
+  wx.navigateTo({
+    url: '/pages/my/cancle/cancle',//要跳转到的页面路径
+})  
+ },
      gotoPageRecord() {
       wx.navigateTo({
             url: '/pages/my/record/record',//要跳转到的页面路径
@@ -65,6 +70,11 @@ Page({
     wx.navigateTo({
           url: '/pages/my/signin/signin',//要跳转到的页面路径
     })  
+ },
+ gotoPageFinished(){
+  wx.navigateTo({
+    url: '/pages/my/finished/finished',//要跳转到的页面路径
+}) 
  },
      onDiscount(){
         wx.navigateTo({

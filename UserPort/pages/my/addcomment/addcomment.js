@@ -1,3 +1,4 @@
+
 Page({
     data: {
       windowHeight: 'auto',
@@ -8,7 +9,7 @@ Page({
         }
       ]
     },
-    onShow: function () {
+  async onShow() {
       // 页面显示
       var vm = this
       var commentList = vm.data.commentList;
@@ -39,9 +40,43 @@ Page({
         commentList: commentList
       });
     },
-    submitComment: function (e) {
+    async submitComment(e) {
       var vm = this;
-      console.log('查看表单e', e.detail.value);
+      var c1 = new wx.cloud.Cloud({
+        // 资源方 小程序A的 AppID
+        resourceAppid: 'wx145f71cc609485c9',
+        // 资源方 小程序A的 的云开发环境ID
+        resourceEnv: 'cloud1-4g02yqp27aa7e10a',
+    })
+      await c1.init()
+      wx.cloud.callFunction({
+        name:'getOpenid',
+      }).then(res=>{
+          console.log(res)//res就将appid和openid返回了
+          //做一些后续操作，不用考虑代码的异步执行问题。
+          let _openid=res.result.OPENID
+          c1.database().collection("cus_info").where({
+            _openid: _openid
+          }).get()
+          .then(res=>{
+            console.log(res.data)
+            let photo=res.data[0].userInfo.avatarUrl;
+            let tocustomer=res.data[0].userInfo.nickName;
+            this.setData({
+              photo:photo
+            })
+            c1.database().collection("t_describe").where({
+              tocustomer: tocustomer
+            }).get()
+            .then(res=>{
+              console.log(res.data)
+                this.setData({
+
+                })
+            })
+            })
+      })
+      console.log('查看表单e', id);
       var commentList = [];
       for (var i = 0, len = vm.data.commentList.length; i < len; i++) {
         commentList.push({

@@ -13,7 +13,7 @@
     <view class="location">起始时间：{{t_starttime}}</view>
     <view class="location">结束时间：{{t_endtime}}</view>
     <view class="information">任务描述：{{cus_details}}</view>
-  </view>
+</view>
 
 <form bindsubmit="btnSub">
   <view class="informationitem">

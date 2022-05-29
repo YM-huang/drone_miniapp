@@ -1,10 +1,5 @@
-// pages/my/history/history.js
 var deliverList=[];
 Page({
-
-    /**
-     * 页面的初始数据
-     */
     data: {
 
     },
@@ -41,8 +36,7 @@ async onLoad() {
             photo:photo
           })
           c1.database().collection("t_describe").where({
-            tocustomer: tocustomer,
-            t_state:0
+            tocustomer: tocustomer
           }).get()
           .then(res=>{
             // console.log(res)
@@ -60,13 +54,8 @@ async onLoad() {
      * 生命周期函数--监听页面初次渲染完成
      */
     onReady: function () {
-
     },
-
-    /**
-     * 生命周期函数--监听页面显示
-     */
-    onShow: function () {
+    onShow: function(){
 
     },
 

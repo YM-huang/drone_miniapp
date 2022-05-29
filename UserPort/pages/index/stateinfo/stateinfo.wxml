@@ -33,9 +33,9 @@
               <view class='col' wx:if="{{deliverList[i].f_id}}">
                  <image src='/ico/info.png'></image>飞手：{{deliverList[i].f_id}}
               </view>
-              <view class='col' wx:else>
+              <!-- <view class='col' wx:else>
                  <image src='/ico/info.png'></image>飞手：匹配失败
-              </view>
+              </view> -->
               <!-- 交接地点 -->
               <view class='col'>
                   <image src='/ico/info.png'></image>交接地点：{{deliverList[i].meet_place}}

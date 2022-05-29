@@ -5,7 +5,8 @@
         <view class="weui-flex order_comment_content bottom_border">
           <view>
             <view class="placeholder">
-              <image src="{{userInfo.avatarUrl}}" class="order_comment_img" type="userAvatarUrl"></image>
+            <!-- 用户头像 -->
+            <open-data type="userAvatarUrl"></open-data>
             </view>
           </view>
           <view class="weui-flex__item order_comment_textarea_box">
@@ -40,7 +41,7 @@
       <view class="line"></view>
     </view>
     <view class="commnet_btn_box">
-      <button class="weui-btn" style="background:#158447;font-size:30rpx;padding:10rpx 0;" type="primary" formType="submit">确定</button>
+      <button class="weui-btn" style="background:#11bb56;;font-size:30rpx;padding:10rpx 0;" type="primary" formType="submit">确定</button>
     </view>
   </view>
 </form>

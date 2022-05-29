@@ -41,8 +41,7 @@ async onLoad() {
             photo:photo
           })
           c1.database().collection("t_describe").where({
-            tocustomer: tocustomer,
-            t_state:0
+            tocustomer: tocustomer
           }).get()
           .then(res=>{
             // console.log(res)

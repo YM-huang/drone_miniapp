@@ -15,7 +15,6 @@
     </block>
   </view>
 </view> -->
-
 <view class="wrapper">
   <view class="loginform">
     <view id="owl-login">

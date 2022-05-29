@@ -67,7 +67,7 @@
             <!-- </text> -->
           </view>
         </view>
-        <view bindtap="gotoPageHistory" class="weui-gridgoldcontent">
+        <view bindtap="gotoPageCancle" class="weui-gridgoldcontent">
           <image class="weui-grid__icon" src="icon/cancel.png" />
           <view class="weui-grid__label2">
             <!-- <text> -->
@@ -75,7 +75,7 @@
             <!-- </text> -->
           </view>
         </view>
-        <view bindtap="gotoPageHistory" class="weui-gridgoldcontent">
+        <view bindtap="gotoPageFinished" class="weui-gridgoldcontent">
           <image class="weui-grid__icon" src="icon/complete.png" />
           <view class="weui-grid__label2">
             <!-- <text> -->

@@ -127,7 +127,7 @@ Page({
 
     await c1.init()
     // console.log(res)
-    var {meet_place,receive_place,t_starttime,t_endtime,cus_details,unit_price,sever_type,t_contact,t_consignee}=res.detail.value;
+    var {t_state,meet_place,receive_place,t_starttime,t_endtime,cus_details,unit_price,sever_type,t_contact,t_consignee}=res.detail.value;
     var unit_price=Number(unit_price)
     var t_contact=Number(t_contact)
     wx.cloud.callFunction({
@@ -147,6 +147,7 @@ Page({
         })
         c1.database().collection('t_describe').add({
           data: {
+            t_state:0,
             meet_place,
             receive_place,
             t_starttime,
