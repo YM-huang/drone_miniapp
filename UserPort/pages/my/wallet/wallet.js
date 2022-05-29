@@ -5,8 +5,8 @@ Page({
      * 页面的初始数据
      */
     data: {
-        address:'中国农业银行',
-        balance:'1000'
+        address:'积分卡',
+        balance:'0'
     },
 
     /**
@@ -93,9 +93,14 @@ Page({
           }
         })
       },
+    //   gotoTransfer:function(){
+    //     wx.navigateTo({
+    //       url: '../transfer/transfer',
+    //     })
+    //   },
       gotoTransfer:function(){
         wx.navigateTo({
-          url: '../transfer/transfer',
+          url: '../addressinput/addressinput',
         })
       },
       fresh:function(){

@@ -1,4 +1,6 @@
 // pages/profile/profile.js
+var Customer=[];
+const db=wx.cloud.database();
 Page({
     data: {
         orderList: [
@@ -24,26 +26,41 @@ Page({
               url: '/pages/my/discount/discount',//要跳转到的页面路径
         })  
      },
-     gotoPageService() {
-        wx.redirectTo({
-            url: '/pages/chat/chat',
-          })
+     gotoPageComment() {
+        wx.navigateTo({
+              url: '/pages/my/comment/comment',//要跳转到的页面路径
+        })  
      },
-     gotoPageSetting() {
-        wx.redirectTo({
-            url: '/pages/my/setting/setting',
-          })
+     gotoPageAddComment() {
+        wx.navigateTo({
+              url: '/pages/my/tocomment/tocomment',//要跳转到的页面路径
+        })  
      },
      gotoPageHistory() {
       wx.navigateTo({
             url: '/pages/my/history/history',//要跳转到的页面路径
       })  
    },
+   gotoPageConfirmed() {
+    wx.navigateTo({
+          url: '/pages/my/confirmed/confirmed',//要跳转到的页面路径
+    })  
+ },
+ gotoPageReqtickets() {
+    wx.navigateTo({
+          url: '/pages/my/reqtickets/reqtickets',//要跳转到的页面路径
+    })  
+ },
      gotoPageRecord() {
       wx.navigateTo({
             url: '/pages/my/record/record',//要跳转到的页面路径
       })  
    },
+   gotoPageSetting() {
+    wx.navigateTo({
+        url: '/pages/my/setting/setting',
+      })
+ },
    gotoPageSignin() {
     wx.navigateTo({
           url: '/pages/my/signin/signin',//要跳转到的页面路径
@@ -54,14 +71,45 @@ Page({
           url: "/pages/my/discount/discount"
         });
       },
-    onLoad: function (options) {
+async onLoad() {
+  // 声明新的 cloud 实例
+  var c1 = new wx.cloud.Cloud({
+    // 资源方 小程序A的 AppID
+    resourceAppid: 'wx145f71cc609485c9',
+    // 资源方 小程序A的 的云开发环境ID
+    resourceEnv: 'cloud1-4g02yqp27aa7e10a',
+})
 
-    },
-    gotoPageComment() {
-        wx.navigateTo({
-              url: '/pages/my/comment/commment',//要跳转到的页面路径
-        })  
-     },
+  // 跨账号调用，必须等待 init 完成
+      // init 过程中，资源方小程序对应环境下的 cloudbase_auth 函数会被调用，并需返回协议字段（见下）来确认允许访问、并可自定义安全规则
+      await c1.init()
+        let that = this;
+        wx.cloud.callFunction({
+          name:'getOpenid',
+        }).then(res=>{
+            console.log(res)//res就将appid和openid返回了
+            //做一些后续操作，不用考虑代码的异步执行问题。
+            let _openid=res.result.OPENID
+            c1.database().collection("cus_info").where({
+              _openid: res.result.OPENID
+            }).get()
+            .then(res=>{
+              // console.log(res)
+              c1.database().collection("cus_info").where({
+                _openid: _openid
+              }).get()
+              .then(res=>{
+                console.log(res.data[0].userInfo)
+                let userInfo=res.data[0].userInfo
+                  this.setData({
+                    userInfo:userInfo
+                  })
+              })
+              })
+        })
+  this.refreshView = this.selectComponent("#refreshView")//刷新组件
+  // console.log(deliverList)
+},
     uploadAvatar:function(){
         wx.chooseImage({
           count: 1,//选取的图片张数

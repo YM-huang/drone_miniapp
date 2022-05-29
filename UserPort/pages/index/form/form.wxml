@@ -1,0 +1,154 @@
+<!-- <view class="background" style="width: 100%;height: 120rpx; background-color: #1baad5;"></view> -->
+<view class="writeInformation">
+    <view class="nameAndPhone">
+      <view class="name">收货人：{{t_consignee}}</view>
+      <view class="phone">{{t_contact}}</view>
+    </view>
+    <view class="location">
+      <view class="image">
+        <image src="../../../ico/address.png"></image>
+      </view>
+      <view>交接地点：{{meet_place}}</view>
+    </view>
+    <view class="location">起始时间：{{t_starttime}}</view>
+    <view class="location">结束时间：{{t_endtime}}</view>
+    <view class="information">任务描述：{{cus_details}}</view>
+  </view>
+
+<form bindsubmit="btnSub">
+  <view class="informationitem">
+    <view class="text">
+      <view class="image">
+       <image src="../../../ico/exportservices.png"></image> 
+      </view>
+      <view>运输类型</view>
+    </view>
+    <input class="input" bindblur="inputtype" placeholder="点击填写运输类型" cursor-spacing="140" type="text" confirm-type="done" name="sever_type"></input>
+  </view>
+  
+  <view class="informationitem">
+    <view class="text">
+      <view class="image">
+       <image src="../../../ico/exportservices.png"></image> 
+      </view>
+      <view>收货人</view>
+    </view>
+    <input class="input" bindblur="inputconsignee" placeholder="点击填写收货人" cursor-spacing="140" type="text" confirm-type="done" name="t_consignee"></input>
+  </view>
+
+  <view class="informationitem">
+    <view class="text">
+      <view class="image">
+       <image src="../../../ico/exportservices.png"></image> 
+      </view>
+      <view>联系方式</view>
+    </view>
+    <input class="input" bindblur="inputphone" placeholder="点击填写联系方式" cursor-spacing="140" type="text" confirm-type="done" name="t_contact"></input>
+  </view>
+
+  <view class="informationitem">
+    <view class="text">
+      <view class="image">
+        <image src="../../../ico/company.png"></image>
+      </view>
+      <view>交接地点</view> 
+    </view>
+    <input class="input" bindblur="inputmeet" placeholder="点击填写交接地点" cursor-spacing="140" type="text" confirm-type="done" name="meet_place"></input>
+  </view>
+
+  <view class="informationitem">
+    <view class="text">
+      <view class="image">
+        <image src="../../../ico/company.png"></image>
+      </view>
+      <view>收货地点</view> 
+    </view>
+    <input class="input" bindblur="inputreceive" placeholder="点击填写收货地点" cursor-spacing="140" type="text" confirm-type="done" name="receive_place"></input>
+  </view>
+
+  <view class="informationitem">
+    <view class="text">
+      <view class="image">
+       <image src="../../../ico/exportservices.png"></image> 
+      </view>
+      <view>起始时间</view>
+    </view>
+    <!-- <input class="input" bindblur="inputechophone" placeholder="点击填写起始时间" cursor-spacing="140" type="date" confirm-type="done"></input> -->
+    <picker mode="multiSelector" bindchange="bindMultiPickerChange1" bindcolumnchange="bindMultiPickerColumnChange" value="{{multiIndex}}" range="{{multiArray}}"style="margin-bottom: 20px;">
+      <input value='{{t_starttime}}' placeholder='选择时间' name="t_starttime"/>
+    </picker>
+  </view>
+
+  <view class="informationitem">
+    <view class="text">
+      <view class="image">
+       <image src="../../../ico/exportservices.png"></image> 
+      </view>
+      <view>结束时间</view>
+    </view>
+ 
+    <!-- <input class="input" bindblur="inputechophone" placeholder="点击填写起始时间" cursor-spacing="140" type="date" confirm-type="done"></input> -->
+    <picker mode="multiSelector" bindchange="bindMultiPickerChange2" bindcolumnchange="bindMultiPickerColumnChange" value="{{multiIndex}}" range="{{multiArray}}"style="margin-bottom: 20px;">
+      <input value='{{t_endtime}}' placeholder='选择时间' name="t_endtime"/>
+  </picker>
+  </view>
+
+  <view class="informationitem">
+    <view class="text">
+      <view class="image">
+        <image src="../../../ico/rmb.png"></image> 
+      </view>
+      <view>订单预算</view>
+    </view>
+    <input class="input" bindblur="inputprice" type="number" cursor-spacing="140" placeholder="点击填写，最低不小于1元" confirm-type="done" name="unit_price">
+    </input>
+  </view>
+
+  <view class="informationitem">
+    <view class="text">
+      <view class="image">
+        <image src="../../../ico/editor.png"></image> 
+      </view>
+      <view>任务描述</view>
+    </view>
+    <input class="input" bindblur="inputdetails" type="text" cursor-spacing="140" placeholder="给飞手的备注" confirm-type="done" name="cus_details">
+    </input>
+  </view>
+  <!-- <button form-type="submit">一二</button> -->
+
+  <!-- 用于底部的留白 -->
+  <view class="nullArea"></view>
+  
+  <view class="confirmArea">
+    <view class="image"><image src="../../../ico/shoppingCar.png"></image></view>
+    <view class="sever_type">{{serviceName}}</view>
+    <view class="price">合计：{{unit_price}}(元)</view>
+    <button class="submit" open-type='getUserInfo'  bindtap="confirm" lang="zh_CN">发布订单</button>
+  </view>
+  <view class="mask" wx:if="{{confirmBoxVisible}}" >
+    <view class="confirmBox">
+      <view class="title">
+        <view>确认服务信息</view>
+        <image src="../../../ico/close.png" bindtap="close"></image>
+      </view>
+
+      <view class="content">
+        <view class="text">确认服务信息:{{sever_type}} </view>
+        <view class="text">订单预算:{{unit_price}}(元)</view>
+        <view class="text">飞行位置:{{meet_place}}</view>
+        <view class="text">开始时间:{{t_starttime}}</view>
+        <view class="text">结束时间:{{t_endtime}}</view>
+        <view class="text">任务描述:{{cus_details}}</view>
+        <!-- <view class="text">提交时间:{{upload_time}}</view> -->
+        <button form-type="submit">确     认</button>
+      </view>
+    </view>
+  </view>
+  </form>
+  
+
+
+
+
+  
+  

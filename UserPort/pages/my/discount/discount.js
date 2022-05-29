@@ -22,6 +22,11 @@ Page({
 
     },
 
+    gotoPageUse() {
+        wx.navigateTo({
+              url: '/pages/index/form/form',//要跳转到的页面路径
+        })  
+     },
     /**
      * 生命周期函数--监听页面显示
      */

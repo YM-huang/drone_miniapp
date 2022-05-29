@@ -52,7 +52,7 @@
           
 <view class="weui-grids">
         <view onTap="onDiscount" class="weui-grid" hover-class="weui-grid_active">
-           <image class="weui-grid__icon" src="../../../images/loading.gif" />
+           <image class="weui-grid__icon" src="../../../images/index.jpg" />
           <view class="weui-grid__label2">
             <!-- <text> -->
             我是商品名称                                                                                                  
@@ -65,7 +65,7 @@
           </view>
         </view>
         <view onTap="onDiscount" class="weui-grid" hover-class="weui-grid_active">
-           <image class="weui-grid__icon" src="../../../images/loading.gif" />
+           <image class="weui-grid__icon" src="../../../images/index.jpg" />
           <view class="weui-grid__label2">
             <!-- <text> -->
             我是商品名称                                                                                                     
@@ -78,7 +78,7 @@
           </view>
         </view>
         <view onTap="categoryTap" class="weui-grid" hover-class="weui-grid_active">
-           <image class="weui-grid__icon" src="../../../images/loading.gif" />
+           <image class="weui-grid__icon" src="../../../images/index.jpg" />
           <view class="weui-grid__label2">
             <!-- <text> -->
             我是商品名称                                                                                                     
@@ -91,7 +91,7 @@
           </view>
         </view>
         <view onTap="onGold" class="weui-grid" hover-class="weui-grid_active">
-           <image class="weui-grid__icon" src="../../../images/loading.gif" />
+           <image class="weui-grid__icon" src="../../../images/index.jpg" />
           <view class="weui-grid__label2">
             <!-- <text> -->
             我是商品名称                                                                                                     

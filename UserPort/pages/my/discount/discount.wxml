@@ -40,7 +40,7 @@
                   </view>
               </view>
 
-              <view onTap="onDiscount" class="weui-grid5">
+              <view bindtap="gotoPageUse" class="weui-grid5">
                   <view class="buttom buttommode">
                     <!-- <text> -->
                       去使用                                                                                                 
@@ -88,7 +88,7 @@
                   </view>
               </view>
 
-              <view onTap="onDiscount" class="weui-grid5">
+              <view bindtap="gotoPageUse" class="weui-grid5">
                   <view class="buttom buttommode">
                     <!-- <text> -->
                       去使用                                                                                                 
@@ -101,7 +101,7 @@
               <view onTap="onDiscount" class="weui-grid1">
                 <view class="weui-grid__label3">
                   <!-- <text> -->
-                  超市新客专享红包                                                                                                 
+                新客专享红包                                                                                                 
                   <!-- </text> -->
                 </view>
                 <view class="lv lvmode">
@@ -136,7 +136,7 @@
                   </view>
               </view>
 
-              <view onTap="onDiscount" class="weui-grid5">
+              <view bindtap="gotoPageUse" class="weui-grid5">
                   <view class="buttom buttommode">
                     <!-- <text> -->
                       去使用                                                                                                 
@@ -184,7 +184,7 @@
                   </view>
               </view>
 
-              <view onTap="onDiscount" class="weui-grid5">
+              <view bindtap="gotoPageUse" class="weui-grid5">
                   <view class="buttom buttommode">
                     <!-- <text> -->
                       去使用                                                                                                 
@@ -232,7 +232,7 @@
                   </view>
               </view>
 
-              <view onTap="onDiscount" class="weui-grid5">
+              <view bindtap="gotoPageUse" class="weui-grid5">
                   <view class="buttom buttommode">
                     <!-- <text> -->
                       去使用                                                                                                 
@@ -280,7 +280,7 @@
                   </view>
               </view>
 
-              <view onTap="onDiscount" class="weui-grid5">
+              <view bindtap="gotoPageUse" class="weui-grid5">
                   <view class="buttom buttommode">
                     <!-- <text> -->
                       去使用                                                                                                 

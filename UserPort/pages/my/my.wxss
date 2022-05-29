@@ -1,7 +1,5 @@
 /* pages/profile/profile.wxss */
 .container {
-    /* background: rgb(15,144,233); */
-    /* background: rgb(21,156,126); */
     background: rgb(34,174,77);
     align-items: stretch;
     padding: 0;
@@ -20,7 +18,7 @@
     width: 100%;
     height: 100%;
     padding-bottom: 300rpx;
-    background: -webkit-gradient(linear, left top, left bottom, from(rgba(244,244,244,0)), color-stop(0.1, #f4f4f4), to(#f4f4f4));
+    background: -webkit-gradient(linear, left top, left bottom, from(rgba(244,244,244,0)), color-stop(0.1, #f4f4f4), to(rgb(253,253,253)));
     opacity: 0;
     transform: translate3d(0,100%,0);
     animation: rise 3s cubic-bezier(0.19, 1, 0.22, 1) .25s forwards;
@@ -216,10 +214,10 @@
     /* border-bottom:1rpx solid #d9d9d9; */
     /* border-radius: 12px; */
   }
-  .weui-grid_active{
-    /* background-color:#ececec; */
-    /* animation: swing 2s linear 0s 1 forwards */
-  }
+  /* .weui-grid_active{
+    background-color:#ececec; 
+    animation: swing 2s linear 0s 1 forwards
+  } */
   @keyframes swing {
       0%, 100% {
           transform: perspective(200px) rotateX(0);
@@ -336,7 +334,7 @@
     float:left;
     padding:20px 10px;
     height: 85px;
-    width:25%;
+    width:33.3%;
     background-color:rgb(248,247,243);
     box-sizing:border-box;
     /* border-right:1rpx solid #d9d9d9; */

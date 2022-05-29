@@ -1,33 +1,52 @@
-<view>
-  <SearchBar id="SearchBar" addflag="{{addflag}}" addimg="{{addimg}}" bind:addhandle="addhandle" searchstr="{{searchstr}}" bind:searchList="searchList" bind:endsearchList="endsearchList" bind:cancelsearch="cancelsearch" bind:activity_clear="activity_clear">
-        </SearchBar>
-    <view class="writeInformation">
-        <view wx:if="{{is_working==false}}">状态：休息中</view>
-        <view wx:else>状态：工作中</view>
-        <switch checked="true" type="switch" bindchange="switch_work"></switch>
+<!--index-->
+<view class="page">
+    <!-- 侧边栏内容 -->
+    <!-- <view class="page-slidebar">
+        <view class="page-content">
+            <view class="wc">
+                <text>首页</text>
+            </view>
+            <view class="wc" bindtap="gotoPageSubmit">
+                <text>发布任务</text>
+            </view>
+            <view class="wc" bindtap="gotoPageNewerTeach">
+                <text>新手指南</text>
+            </view>
+        </view>
+    </view> -->
+    <!-- <view bindtouchmove="tap_drag" bindtouchend="tap_end" bindtouchstart="tap_start" class="page-top {{open ? ['c-state','cover'] : ''}} "> -->
+        <!-- <SearchBar id="SearchBar" addflag="{{addflag}}" addimg="{{addimg}}" bind:addhandle="addhandle" searchstr="{{searchstr}}" bind:searchList="searchList" bind:endsearchList="endsearchList" bind:cancelsearch="cancelsearch" bind:activity_clear="activity_clear">
+        </SearchBar> -->
+        <view class="writeInformation">
+    <view class="post" bindtap="gotoform">
+      <image src="../../ico/posts_fill.png"></image>
     </view>
-    <view class="sun" wx:if="{{is_working==true}}">
-        <image src="../../ico/sun.png"></image>
-    </view>
-    <view class="buttonArea">
-      <view  bindtap="gotopageRank" class="button">
-        <image src="../../ico/rank.png"></image>
-        <view>飞手排行</view>  
-      </view>
-      <view  bindtap="gotoPageSubmit" class="button"> 
-        <image src="../../ico/start.png"></image>
-        <view>开始接单</view> 
-      </view>
-      <view  bindtap="gotoPageNewerTeach" class="button"> 
-        <image src="../../ico/guide.png"></image>
-        <view>新手指南</view>
-      </view>
-      <view  bindtap="#" class="button" bindtap="post"> 
-        <image src="../../ico/more.png"></image>
-        <view>敬请期待</view> 
-      </view>
-    </view>
+  </view>
+  <view class="text" wx:if="{{postFlag}}" bindtap="changeFunction">发布订单</view>
+  <view class="text" wx:else bindtap="changeFunction">查看订单</view>
+       
+    
 </view>
-<view class="Mask" wx-if="{{is_working==false}}">
-  <image src='../../ico/sleep.png'></image>
-</view>
+<button bindtap="gotoPageNewerTeach">
+    <image class='share-img' src='icon/quest.png'></image>
+</button>
+
+<!-- 人工客服 -->
+<button plain='true' open-type="contact"  class="circle">
+    <image src='icon/39.png' class='image'></image>
+  </button>
+<!-- <view class="index-title">无人机</view>
+<view class="index-title">共享平台</view>  -->
+
+<!-- <van-popup
+  show="{{ show }}"
+  position="top"
+  custom-style="width: 100%;"
+  bind:close="onClose"
+/> -->
+
+
+
+
+
+

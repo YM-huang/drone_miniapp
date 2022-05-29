@@ -103,7 +103,7 @@
     right: 0;
     top: 0;
     color: #fff;
-    background-color: rgba(61, 158, 5, 0.781);
+    background-color:  rgb(34,174,77);
     display: flex;
     justify-content: center;
     align-items: center;

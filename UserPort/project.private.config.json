@@ -1,34 +1,50 @@
 {
-    "setting": {},
+    "setting": {
+        "compileHotReLoad": true
+    },
+    "description": "项目私有配置文件。此文件中的内容将覆盖 project.config.json 中的相同字段。项目的改动优先同步到此文件中。详见文档：https://developers.weixin.qq.com/miniprogram/dev/devtools/projectconfig.html",
+    "cloudfunctionRoot": "cloud/",
     "condition": {
         "miniprogram": {
             "list": [
                 {
-                    "name": "问题2",
-                    "pathName": "pages/index/submit/process1/process1",
+                    "name": "my",
+                    "pathName": "pages/my/my",
                     "query": "",
                     "scene": null
                 },
                 {
-                    "name": "问题1",
-                    "pathName": "pages/index/submit/submit",
+                    "name": "history",
+                    "pathName": "pages/my/history/history",
                     "query": "",
                     "scene": null
                 },
                 {
-                    "name": "问题3",
-                    "pathName": "pages/index/submit/process2/process2",
+                    "name": "setting",
+                    "pathName": "pages/my/setting/setting",
                     "query": "",
                     "scene": null
                 },
                 {
-                    "name": "问题6",
-                    "pathName": "pages/index/submit/process5/process5",
+                    "name": "stateinfo",
+                    "pathName": "pages/index/stateinfo/stateinfo",
+                    "query": "",
+                    "scene": null
+                },
+                {
+                    "name": "form",
+                    "pathName": "pages/index/form/form",
+                    "query": "",
+                    "scene": null
+                },
+                {
+                    "name": "history",
+                    "pathName": "pages/my/history/history",
                     "query": "",
                     "scene": null
                 }
             ]
         }
     },
-    "description": "项目私有配置文件。此文件中的内容将覆盖 project.config.json 中的相同字段。项目的改动优先同步到此文件中。详见文档：https://developers.weixin.qq.com/miniprogram/dev/devtools/projectconfig.html"
+    "projectname": "drone_miniapp-master"
 }

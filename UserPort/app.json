@@ -1,8 +1,8 @@
 {
     "pages": [
+        "pages/login/login",
         "pages/index/index",
         "pages/my/my",
-        "pages/index/submit/submit",
         "pages/index/teaching/teaching",
         "pages/logs/logs",
         "utils/dateSetting",
@@ -19,9 +19,15 @@
         "pages/my/collectMoney/collectMoney",
         "pages/my/transfer/transfer",
         "pages/my/addressinput/addressinput",
-        "pages/jiedan/jiedan",
+        "pages/index/stateinfo/stateinfo",
+        "pages/index/form/form",
+        "pages/my/comment/comment",
         "pages/my/setting/setting",
-        "pages/my/comment/commment"
+        "pages/my/addcomment/addcomment",
+        "pages/my/invoicing/invoicing",
+        "pages/my/confirmed/confirmed",
+        "pages/my/reqtickets/reqtickets",
+        "pages/my/tocomment/tocomment"
     ],
     "window": {
         "enablePullDownRefresh": true,
@@ -37,12 +43,6 @@
                 "text": "首页",
                 "iconPath": "images/首页.png",
                 "selectedIconPath": "images/首页after.png"
-            },
-            {
-                "pagePath": "pages/chat/chat",
-                "text": "客服",
-                "iconPath": "images/客服.png",
-                "selectedIconPath": "images/客服after.png"
             },
             {
                 "pagePath": "pages/my/my",

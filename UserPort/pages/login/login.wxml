@@ -1,0 +1,44 @@
+<!-- <button class="avatar-wrapper" open-type="chooseAvatar" bind:chooseavatar="onChooseAvatar">
+  <image class="avatar" src="{{avatarUrl}}"></image>
+</button> 
+<view>昵称：<input type="nickname" class="weui-input" placeholder="请输入昵称" bindblur="setFname"/>
+</view>
+<button type="primary" bindtap="goToIndex">授权登录</button> -->
+<!-- <view class="container">
+  <view class="userinfo">
+    <block wx:if="{{!hasUserInfo}}">
+      <button type="primary" wx:if="{{canIUseGetUserProfile}}" bindtap="getUserProfile"> 授权获取头像昵称 </button>
+    </block>
+    <block wx:else>
+      <image bindtap="bindViewTap" class="userinfo-avatar" src="{{userInfo.avatarUrl}}" mode="cover"></image>
+      <text class="userinfo-nickname">{{userInfo.nickName}}</text>
+    </block>
+  </view>
+</view> -->
+
+<view class="wrapper">
+  <view class="loginform">
+    <view id="owl-login">
+      <image class="head" src="../../images/owl-login.png"></image>
+      <view class="hand {{inputPassword ? 'hand-password' : ''}}"></view>
+      <view class="hand hand-r {{inputPassword ? 'hand-r-password' : ''}}"></view>
+      <view class="arms">
+        <image class="arm {{inputPassword ? 'arm-password' : ''}}" src="../../images/owl-login-arm.png"></image>
+        <image class="arm arm-r {{inputPassword ? 'arm-r-password' : ''}}" src="../../images/owl-login-arm.png"></image>
+      </view>
+    </view>
+    <view class="control-group">
+    <view bindtap="checkedTap">
+        <radio value="是" style="font-size: 13px;margin: 20rpx auto;" checked="{{checked}}">我已阅读并同意用户协议并授权个人信息</radio>
+    </view>
+      <!-- <button disabled="{{isLoading}}" loading="{{isLoading}}" bindtap="bindIdentity" type="primary">绑定身份</button> -->
+      <block wx:if="{{!hasUserInfo}}">
+      <button type="primary" wx:if="{{canIUseGetUserProfile}}" bindtap="getUserProfile"> 进入小程序 </button>
+    </block>
+    <block wx:else>
+      <image bindtap="bindViewTap" class="userinfo-avatar" src="{{userInfo.avatarUrl}}" mode="cover"></image>
+      <text class="userinfo-nickname">{{userInfo.nickName}}</text>
+    </block>
+    </view>
+  </view>
+</view>

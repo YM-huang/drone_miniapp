@@ -50,8 +50,7 @@ scroll-view{
     border-top-right-radius: 43rpx;
     border-bottom-right-radius: 0;
     border-bottom-left-radius: 43rpx;
-    /* background-color: rgb(18,183,245); */
-    background-color: rgb(135,190,45);
+    background-color: rgb(18,183,245);
     font-size: 32rpx;
     color: #fff;
     position: relative;
