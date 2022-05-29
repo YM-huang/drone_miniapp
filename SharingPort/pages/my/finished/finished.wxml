@@ -1,7 +1,7 @@
 <view class="container">
       <view class="page-section-demo">
 
-        <view class="weui-grids" wx:for="{{finshOrder}}" wx:for-index="i" wx:if="{{finshOrder[i].t_state==1}}">
+        <view class="weui-grids" wx:for="{{finshOrder}}" wx:for-index="i" wx:if="{{finshOrder[i].t_state==2}}">
               <view onTap="onDiscount" class="weui-grid8">
                 <view class="weui-grid__label6">
                   <am-icon type="location" size="18" style="color: rgb(94,208,254);" />
@@ -28,7 +28,7 @@
                   <view class="lv lvmode">
                   <!-- <text> -->
                     <view>
-                      已接单</view>                                                                                    
+                      已确认</view>                                                                                    
                   <!-- </text> -->
                 </view>
               </view>

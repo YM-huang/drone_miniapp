@@ -9,7 +9,7 @@ exports.main = async (event) => {
     var f_name=event.nickName;
     return await db.collection("t_describe").doc(id).update({
         data:{
-            t_state:1,
+            t_state:3,
             f_name:f_name
         }
     })

@@ -66,10 +66,15 @@ Page({
             url: '/pages/my/invoicing/invoicing',//要跳转到的页面路径
       })  
    },
-   gotoPageconfirmed() {
+   gotoPageFinished() {
       wx.navigateTo({
-            url: '/pages/my/confirmed/confirmed',//要跳转到的页面路径
+            url: '/pages/my/finished/finished',//要跳转到的页面路径
       })  
+   },
+   gotoPageCancle(){
+    wx.navigateTo({
+      url: '/pages/my/cancle/cancle',//要跳转到的页面路径
+})  
    },
     gotoPageDiscount() {
         wx.navigateTo({
@@ -85,6 +90,11 @@ Page({
         wx.navigateTo({
             url: '/pages/my/setting/setting',
           })
+     },
+     gotoPageConfirmed(){
+      wx.navigateTo({
+        url: '/pages/my/confirmed/confirmed',//要跳转到的页面路径
+  })  
      },
      gotoPageHistory() {
       wx.navigateTo({
@@ -116,6 +126,11 @@ Page({
               url: '/pages/my/comment/commment',//要跳转到的页面路径
         })  
      },
+     gotoPageConfirmed() {
+      wx.navigateTo({
+            url: '/pages/my/confirmed/confirmed',//要跳转到的页面路径
+      })  
+   },
     // uploadAvatar:function(){
     //     wx.chooseImage({
     //       count: 1,//选取的图片张数

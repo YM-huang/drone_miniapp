@@ -25,7 +25,9 @@
         "pages/my/comment/commment",
         "pages/my/confirmed/confirmed",
         "pages/my/invoicing/invoicing",
-        "pages/my/addcommment/addcomment"
+        "pages/my/addcommment/addcomment",
+        "pages/my/cancle/cancle",
+        "pages/my/finished/finished"
     ],
     "window": {
         "enablePullDownRefresh": true,

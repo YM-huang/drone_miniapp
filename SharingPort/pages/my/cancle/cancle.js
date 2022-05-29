@@ -1,10 +1,8 @@
 // pages/my/history/history.js
 
-
 // 0表示未接单
 // 1表示已接单
 // 2表示已确认
-
 var deliverList=[];
 const db=wx.cloud.database();
 var f_name='';

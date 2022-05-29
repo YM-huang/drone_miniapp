@@ -3,7 +3,17 @@
         "compileHotReLoad": true
     },
     "description": "项目私有配置文件。此文件中的内容将覆盖 project.config.json 中的相同字段。项目的改动优先同步到此文件中。详见文档：https://developers.weixin.qq.com/miniprogram/dev/devtools/projectconfig.html",
+    "projectname": "miniprogram-3",
     "condition": {
+        "plugin": {
+            "list": []
+        },
+        "game": {
+            "list": []
+        },
+        "gamePlugin": {
+            "list": []
+        },
         "miniprogram": {
             "list": [
                 {
@@ -53,9 +63,20 @@
                     "pathName": "pages/my/rank/rank",
                     "query": "",
                     "scene": null
+                },
+                {
+                    "name": "confirmed",
+                    "pathName": "pages/my/confirmed/confirmed",
+                    "query": "",
+                    "scene": null
+                },
+                {
+                    "name": "finished",
+                    "pathName": "pages/my/finished/finished",
+                    "query": "",
+                    "scene": null
                 }
             ]
         }
-    },
-    "projectname": "miniprogram-3"
+    }
 }

@@ -22,17 +22,16 @@ Page({
     array:['订单金额','发布时间'],
     time:""
   },
-  // 显示弹窗口
+  // 确认接单
   confirm(event){
     idx = event.currentTarget.dataset.idx;
-    // console.log("当前的是",idx);
+    console.log("当前的是",idx);
     this.setData({
-      idx:event.currentTarget.dataset.idx,
+      idx:event.currentTarget.dataset.idx
     })
     //一个接单 骑手积分加100分
-    this.addGrade();
+    // this.addGrade();
   },  
-  
   addGrade(){
     let that = this;
     wx.cloud.callFunction({
@@ -49,10 +48,10 @@ Page({
             _openid: _openid
           }).update({
             data:{
+              //排行榜积分
               f_grade:_.inc(100)
             }
-          })
-         
+          });
           })
     })
   },
@@ -90,7 +89,7 @@ Page({
     // 获取数据库对象
     db.collection('t_describe').get()
     .then(res=>{
-        console.log(res);
+        // console.log(res);
         this.setData({
           // confirmBoxVisible: true,
           deliverList:res.data
@@ -109,7 +108,7 @@ Page({
     wx.cloud.callFunction({
       name:'getOpenid',
     }).then(res=>{
-        console.log(res)//res就将appid和openid返回了
+        // console.log(res)//res就将appid和openid返回了
         //做一些后续操作，不用考虑代码的异步执行问题。
         let _openid=res.result.OPENID
         db.collection("f_info").where({
@@ -138,7 +137,7 @@ Page({
                 nickName:nickName
               }
             }).then(res=>{
-              console.log(res)
+              // console.log(res)
             })
             this.close();
             wx.showToast({
@@ -148,8 +147,6 @@ Page({
           })
           // console.log(userInfo)
           })
-
-  
   },
   /**
    * 生命周期函数--监听页面加载
@@ -161,7 +158,7 @@ Page({
           db.collection("t_describe").watch({
             onChange:res=>{
               this.setData({
-              deliverList:res.docs
+                deliverList:res.docs
             })
             },
             onError:err=>{
@@ -222,7 +219,6 @@ Page({
   onShareAppMessage: function () {
 
   },
-
   pickChange:function(e){
     // console.log(e.detail.value)
     // // pick=e.detail.value
