@@ -1,0 +1,161 @@
+<view class="container">
+    <view class="content">
+      <view class="hd" style="transform:rotateZ({{angle}}deg);">
+         <view onTap="onDiscount" class="weui-grid4" hover-class="weui-grid_active">
+          <view class="weui-grid__label3">
+            wsdbd占领了封面                                                            
+          </view>
+          </view>
+          
+          <image class="wave" src="../wave.png" mode="aspectFill"></image>
+          <image class="wave wave-bg" src="../wave.png" mode="aspectFill"></image>
+      </view>
+
+      <view class="weui-grids">
+        <view onTap="onDiscount" class="weui-grid" hover-class="weui-grid_active">
+          <view class="weui-grid__label1">
+
+            0                                                             
+          </view>
+        </view>
+        <view onTap="onDiscount" class="weui-grid2" hover-class="weui-grid_active">
+          <image class="weui-grid__icon" src="../user.jpg" />
+        </view>
+        <view onTap="onDiscount" class="weui-grid2" hover-class="weui-grid_active">
+          <view class="weui-grid__labelname">
+
+            hym                                                                                                  
+          </view>
+        </view>
+        <view onTap="onDiscount" class="weui-grid3" hover-class="weui-grid_active">
+          <view class="weui-grid__labelkm">
+            10086                                                                                                  
+          </view>
+        </view>
+        <view onTap="onDiscount" class="weui-grid" hover-class="weui-grid_active">
+            <image class="weui-grid__icon2" src="../icon/喜欢.png" />
+        </view>
+      </view>
+
+      <view class="weui-grids2">
+        <view onTap="onDiscount" class="weui-grid" hover-class="weui-grid_active">
+          <view class="weui-grid__label1">
+            1                                                                                                  
+          </view>
+        </view>
+         <view onTap="onDiscount" class="weui-grid2" hover-class="weui-grid_active">
+          <image class="weui-grid__icon" src="../user.jpg" />
+        </view>
+        <view onTap="onDiscount" class="weui-grid2" hover-class="weui-grid_active">
+          <view class="weui-grid__labelname">
+            hym                                                                                                  
+          </view>
+        </view>
+        <view onTap="onDiscount" class="weui-grid3" hover-class="weui-grid_active">
+          <view class="weui-grid__labelkm">
+            10086                                                                                                  
+          </view>
+        </view>
+        <view onTap="onDiscount" class="weui-grid" hover-class="weui-grid_active">
+            <image class="weui-grid__icon2" src="../icon/喜欢.png" />
+        </view>
+      </view>
+
+      <view class="weui-grids2">
+        <view onTap="onDiscount" class="weui-grid" hover-class="weui-grid_active">
+          <view class="weui-grid__label1">
+            2                                                             
+          </view>
+        </view>
+         <view onTap="onDiscount" class="weui-grid2" hover-class="weui-grid_active">
+          <image class="weui-grid__icon" src="../user.jpg" />
+        </view>
+        <view onTap="onDiscount" class="weui-grid2" hover-class="weui-grid_active">
+          <view class="weui-grid__labelname">
+            hym                                                           
+          </view>
+        </view>
+        <view onTap="onDiscount" class="weui-grid3" hover-class="weui-grid_active">
+          <view class="weui-grid__labelkm">
+            10086                                                         
+          </view>
+        </view>
+        <view onTap="onDiscount" class="weui-grid" hover-class="weui-grid_active">
+            <image class="weui-grid__icon2" src="../icon/喜欢.png" />
+        </view>
+      </view>
+
+      <view class="weui-grids2">
+        <view onTap="onDiscount" class="weui-grid" hover-class="weui-grid_active">
+          <view class="weui-grid__label1">
+            3                                                             
+          </view>
+        </view>
+         <view onTap="onDiscount" class="weui-grid2" hover-class="weui-grid_active">
+          <image class="weui-grid__icon" src="../user.jpg" />
+        </view>
+        <view onTap="onDiscount" class="weui-grid2" hover-class="weui-grid_active">
+          <view class="weui-grid__labelname">
+            hym                                                           
+          </view>
+        </view>
+        <view onTap="onDiscount" class="weui-grid3" hover-class="weui-grid_active">
+          <view class="weui-grid__labelkm">
+            10086                                                         
+          </view>
+        </view>
+        <view onTap="onDiscount" class="weui-grid" hover-class="weui-grid_active">
+            <image class="weui-grid__icon2" src="../icon/喜欢.png" />
+        </view>
+      </view>
+
+      <view class="weui-grids2">
+        <view onTap="onDiscount" class="weui-grid" hover-class="weui-grid_active">
+          <view class="weui-grid__label1">
+            4                                                             
+          </view>
+        </view>
+         <view onTap="onDiscount" class="weui-grid2" hover-class="weui-grid_active">
+          <image class="weui-grid__icon" src="../user.jpg" />
+        </view>
+        <view onTap="onDiscount" class="weui-grid2" hover-class="weui-grid_active">
+          <view class="weui-grid__labelname">
+            hym                                                           
+          </view>
+        </view>
+        <view onTap="onDiscount" class="weui-grid3" hover-class="weui-grid_active">
+          <view class="weui-grid__labelkm">
+            10086                                                         
+          </view>
+        </view>
+        <view onTap="onDiscount" class="weui-grid" hover-class="weui-grid_active">
+            <image class="weui-grid__icon2" src="../icon/喜欢.png" />
+        </view>
+      </view>
+
+      <view class="weui-grids2">
+        <view onTap="onDiscount" class="weui-grid" hover-class="weui-grid_active">
+          <view class="weui-grid__label1">
+            5                                                             
+          </view>
+        </view>
+         <view onTap="onDiscount" class="weui-grid2" hover-class="weui-grid_active">
+          <image class="weui-grid__icon" src="../user.jpg" />
+        </view>
+        <view onTap="onDiscount" class="weui-grid2" hover-class="weui-grid_active">
+          <view class="weui-grid__labelname">
+            hym                                                           
+          </view>
+        </view>
+        <view onTap="onDiscount" class="weui-grid3" hover-class="weui-grid_active">
+          <view class="weui-grid__labelkm">
+            10086                                                         
+          </view>
+        </view>
+        <view onTap="onDiscount" class="weui-grid" hover-class="weui-grid_active">
+            <image class="weui-grid__icon2" src="../icon/喜欢.png" />
+        </view>
+      </view>
+
+    </view>
+</view>

@@ -1,0 +1,123 @@
+Page({
+  data: {
+    imgItems: [
+      "../../images/index.jpg",
+      "../../images/index2.jpg",
+      "../../images/index2.jpg"
+    ],
+      activeKey: 0,
+      show: true,
+      indicatorDots: true,  //是否显示面板指示点
+      autoplay: true,      //是否自动切换
+      interval: 3000,       //自动切换时间间隔
+      duration: 1000,       //滑动动画时长
+      inputShowed: false,
+      inputVal: "",
+      circular:true,
+
+      // 首页侧滑
+      open: false,
+      // mark 是指原点x轴坐标
+      mark: 0,
+      // newmark 是指移动的最新点的x轴坐标 
+      newmark: 0,
+      istoright: true,
+      addflag:true, //判断是否显示搜索框右侧部分
+      addimg:"icon/签到.png",
+      postFlag:true,//是否为发布订单的文字
+      confirmBoxVisible: false,//确认弹框的显示
+      deliverList: [],
+      currentDeliverList: {},
+      //以下是骑手和客户的数据
+      gotmsg:"",
+      output:[],
+      num:3,
+  },
+  changeFunction:function(){//改变文字显示
+    this.setData({
+      postFlag: !this.data.postFlag
+    })
+  },
+    gotoPageNewerTeach:function (options) {
+    wx.navigateTo({
+          url: 'teaching/teaching',//要跳转到的页面路径
+    })  
+ },
+ gotoform:function(){
+  console.log("go to form success!");
+  // console.log(check.imgUrl);
+  if (this.data.postFlag){
+    wx.navigateTo({
+      url: './form/form',
+    })
+  }else{
+    wx.navigateTo({
+      url: './stateinfo/stateinfo',
+    })
+  }
+  
+},
+gotoPageParse:function (options) {
+  wx.navigateTo({
+        url: 'wxParse/wxParse',//要跳转到的页面路径
+  })  
+},
+onShareAppMessage: function (res) {
+  return {
+    title: '你的订单被飞手接受了',
+    desc: '快去看看吧',
+    path: 'pages/index/index',
+    success: function (res) {
+      // 转发成功
+    },
+    fail: function (res) {
+      // 转发失败
+    }
+  }
+},
+  // 点击左上角小图标事件
+  tap_ch: function(e) {
+    if (this.data.open) {
+        this.setData({
+            open: false
+        });
+    } else {
+        this.setData({
+            open: true
+        });
+    }
+  },
+  tap_start: function(e) {
+    // touchstart事件
+    // 把手指触摸屏幕的那一个点的 x 轴坐标赋值给 mark 和 newmark
+    this.data.mark = this.data.newmark = e.touches[0].pageX;
+  },
+  tap_drag: function(e) {
+    // touchmove事件
+    this.data.newmark = e.touches[0].pageX;
+    // 手指从左向右移动
+    if (this.data.mark < this.data.newmark) {
+        this.istoright = true;
+    }
+    // 手指从右向左移动
+    if (this.data.mark > this.data.newmark) {
+        this.istoright = false;
+    }
+    this.data.mark = this.data.newmark;
+  },
+  tap_end: function(e) {
+    // touchend事件
+    this.data.mark = 0;
+    this.data.newmark = 0;
+    // 通过改变 opne 的值，让主页加上滑动的样式
+    if (this.istoright) {
+        this.setData({
+            open: true
+        });
+    } else {
+        this.setData({
+            open: false
+        });
+    }
+  },
+})

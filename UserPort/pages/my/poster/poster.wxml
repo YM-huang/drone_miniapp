@@ -1,0 +1,31 @@
+
+<import src="./components/we-cropper.wxml"/>
+
+
+<view class="container">
+  <view class="cont">
+    <view class="upload-bg">
+      <template wx:if="{{hasUrl}}" is="we-cropper" data="{{...cropperOpt}}"></template>
+      <view wx:else class="upload-cont" >
+        <view class="upload-icon" bindtap="choose">
+          <image src="/images/upload.png" mode='aspectFill'/>
+        </view>
+        <text class="upload-text" bindtap="choose">点击上传图片</text>
+      </view>
+    </view>
+    <button class="upload-btn" bindtap="choose">重新确认</button>
+    <button wx:if="{{hasUrl}}" class="upload-btn" open-type="getUserInfo" bindgetuserinfo="onGotUserInfo">生成海报</button>
+  </view>
+  <image src="/images/page-bottom-bg.png" mode='widthFix' class="bg"/>
+  <!-- 制作完成的图片 -->
+  <cover-view class='imagePathBox' hidden="{{maskHidden == false}}">
+    <cover-image src="{{imagePath}}" class='shengcheng'></cover-image>
+    <button class='save' bindtap='save'>保存到相册</button>
+    <button class='save remake' bindtap='remake'>再制作一张</button>
+  </cover-view>
+  <view hidden="{{maskHidden == false}}" class="mask"></view> 
+  <!-- 制作中canvas -->
+  <view class="canvas-box">
+    <canvas  style="width: calc({{width*0.9 + 'px'}});height: calc({{height*0.9  + 'px'}});position:fixed;top:9999px" canvas-id="mycanvas"/>
+  </view>  
+</view>

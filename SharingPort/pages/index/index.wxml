@@ -1,0 +1,47 @@
+<!--index-->
+<view class="page">
+    <!-- 侧边栏内容 -->
+    <!-- <view class="page-slidebar">
+        <view class="page-content">
+            <view class="wc">
+                <text>首页</text>
+            </view>
+            <view class="wc" bindtap="gotoPageSubmit">
+                <text>发布任务</text>
+            </view>
+            <view class="wc" bindtap="gotoPageNewerTeach">
+                <text>新手指南</text>
+            </view>
+        </view>
+    </view> -->
+    <!-- <view bindtouchmove="tap_drag" bindtouchend="tap_end" bindtouchstart="tap_start" class="page-top {{open ? ['c-state','cover'] : ''}} "> -->
+        <SearchBar id="SearchBar" addflag="{{addflag}}" addimg="{{addimg}}" bind:addhandle="addhandle" searchstr="{{searchstr}}" bind:searchList="searchList" bind:endsearchList="endsearchList" bind:cancelsearch="cancelsearch" bind:activity_clear="activity_clear">
+        </SearchBar>
+        <view class="writeInformation">
+    <view class="post" bindtap="gotoform">
+      <image src="../../ico/posts_fill.png"></image>
+    </view>
+  </view>
+  <view class="text" wx:if="{{postFlag}}" bindtap="changeFunction">发布订单</view>
+  <view class="text" wx:else bindtap="changeFunction">查看订单</view>
+       
+    
+</view>
+<button bindtap="gotoPageNewerTeach">
+    <image class='share-img' src='icon/quest.png'></image>
+  </button>
+<!-- <view class="index-title">无人机</view>
+<view class="index-title">共享平台</view>  -->
+
+<!-- <van-popup
+  show="{{ show }}"
+  position="top"
+  custom-style="width: 100%;"
+  bind:close="onClose"
+/> -->
+
+
+
+
+
+

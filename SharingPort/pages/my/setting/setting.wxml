@@ -1,0 +1,37 @@
+<!--pages/jiedan/working/working.wxml-->
+  <view class="informationitem">
+    <view class="text">
+      <view class="image">
+        <image src="../../../ico/export services.png"></image> 
+      </view>
+      <view>取一个昵称</view> 
+    </view>
+    <input class="input" bindblur="getNickname" cursor-spacing="140" placeholder="{{nick_name}}" type="text" confirm-type="done"></input>
+  </view>
+
+  <view class="informationitem">
+    <view class="text">
+      <view class="image">
+        <image src="../../../ico/company.png"></image>
+      </view>
+      <view>填写你的编号</view> 
+    </view>
+    <input class="input" bindblur="getSchoolNum" cursor-spacing="140" placeholder="{{school_num}}" type="text" confirm-type="done"></input>
+  </view>
+
+  <view class="informationitem">
+    <view class="text">
+      <view class="image">
+        <image src="../../../ico/rmb.png"></image> 
+      </view>
+      <view>填写你的个性签名</view>
+    </view>
+    <input class="input" bindblur="getSign" type="text" cursor-spacing="140" placeholder="{{my_Sign}}"   confirm-type="done">
+    </input>
+  </view>
+
+
+  <view class="confirmArea">
+    <button class="submit"  bindtap="confirm" lang="zh_CN">提交信息</button>
+  </view>
+

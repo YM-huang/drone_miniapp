@@ -1,0 +1,39 @@
+/* pages/transfer/transfer.wxss */
+.input{
+    height: 100px;
+    width: 100%;
+    background: #fff;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    padding: 0 15px;
+    box-sizing: border-box;
+  }
+  .input1{
+    background: #f1f1f1;
+  }
+  .his_title{
+    height: 35px;
+    width: 100%;
+    padding: 0 15px;
+    box-sizing: border-box;
+    line-height: 35px;
+    background: #f1f1f1;
+  }
+  .latest{
+    width: 100%;
+    
+  }
+  .item{
+    height: 160rpx;
+    width: 100%;
+    display: flex;
+    padding: 30rpx;
+    box-sizing: border-box;
+    border-bottom: 1px solid #f1f1f1;
+  }
+  .item text{
+    flex: 1;
+    word-break: break-all;
+    color: #333;
+  }

@@ -1,0 +1,36 @@
+<!--pages/main/index.wxml-->
+<view class="container-box">
+    <!--<view class="img-box">
+        <image bindtap="previewImg" mode="scaleToFill" src="{{imagePath}}"></image>
+    </view>-->
+    <view class='img-wrap'>
+      <view class='title'>钱包扫一扫，向我付款</view>
+      <view class='img'>
+        <image bindtap="previewImg" mode="scaleToFill" src="{{imagePath}}"></image>
+        <view class='amount' wx:if='{{showAmount}}'>向我支付 {{amount}} 元</view>
+        <view class='ab'>
+          <text class='a' bindtap='setValue'>{{shezhi}}</text>
+          <text class='b' bindtap='save'>保存图片</text>
+        </view>
+      </view>
+    </view>
+</view>
+<view class='{{setValue}}'>
+  <view class='cancelSet'>
+    <text bindtap='cancel'>取消</text>
+  </view>
+  <view class='input_value'>
+    <view class='content'>
+      <text>金额</text>
+      <input bindinput='getAmountValue'></input>
+    </view>
+  </view>
+
+  <view class='yuan'>
+    <view class='btn' bindtap='submitValue'>确定</view>
+  </view>
+
+</view>
+<view class="canvas-box">
+  <canvas  style="width: 686rpx;height: 686rpx;background:#FF8201;" canvas-id="mycanvas"/>
+</view>

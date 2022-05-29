@@ -1,0 +1,14 @@
+<!--pages/transfer/transfer.wxml-->
+<view class='input' bindtap='gotoinputaddress' hover-class='input1'>
+ <image src='../img/输入.png' style='width:100rpx;height:100rpx;margin-right:30rpx;'></image> 
+ <text>输入收款地址</text>
+</view>
+<view class='his_title'>最近转账</view>
+<scroll-view scroll-y='true' class='latest' style='height:{{height}}px'>
+  <view wx:for='{{list}}' class='item' bindtap='gotoinput' data-address='{{item}}' hover-class='input1'>
+    <image src='../img/his_acc.png' style='width:100rpx;height:100rpx;margin-right:30rpx;'></image>
+    <text>{{item}}</text>
+  </view>
+</scroll-view>
+
+

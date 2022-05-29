@@ -1,0 +1,11 @@
+<!--pages/addressinput/addressinput.wxml-->
+<view class='input_group'>
+  <text>收款</text>
+  <input value='{{address}}'  bindinput='getAddress' placeholder='输入收款地址'></input>
+  <view class='copy' bindtap='getCopy'>
+    <text>粘贴</text>
+  </view>
+</view>
+<view class='btn' bindtap='submit'>
+  <view>确定</view>
+</view>
